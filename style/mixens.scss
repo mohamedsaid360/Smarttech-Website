@@ -1,0 +1,48 @@
+@import "variables.scss";
+
+// {   =================== Header Mixins =========================== }  //
+@mixin headerLinkInactive {
+  color: $header_Inactive_color;
+  font-family: $Jost_font;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2.3;
+  letter-spacing: 0.19px;
+  display: inline-block;
+}
+@mixin headerLinkActive {
+  color: $white;
+  font-family: $Jost_font;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2.3;
+
+  letter-spacing: 0.19px;
+  display: inline-block;
+}
+@mixin coolHeaderBorderNaveLink {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: $blue_with_opacity;
+  transition: width 0.3s;
+}
+@mixin normal {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  
+}
+
+@mixin blackHeader {
+  @include normal;      
+  font-weight: 800;
+  letter-spacing: -1.1px;
+  text-align: center;
+  color: $regylar-black;
+  font-family: $Jost_font;
+  text-transform: uppercase;
+}

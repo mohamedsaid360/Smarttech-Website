@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-134166165-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-134166165-1");
+    </script>
+
+    <!-- <script type="text/javascript">
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "3c6268525ae78fa1f57a31e7c8815c9c2b8f27b79de7425bd152e6f824dfa431feb79731b60e202192c2895c9acefb61",
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.com/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+      d.write("<div id='zsiqwidget'></div>");
+    </script> -->
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smarttech</title>
-    <!-- main css File -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <!-- made by www.metatags.info -->
+    <title>
+      Software Development company in Egypt | outsourcing | offshore | RFID
+    </title>
+    <meta
+      name="description"
+      content="custom software development company In Egypt , serving companies in KSA, USA , UAE, Europe, provide outsourcing,offshore , mobile and web, Request a quote NOW,"
+    />
+    <meta
+      name="keywords"
+      content="offshore custom software development company  ,Egypt, Hire developers ,  rfid, RFID EGYPT , rfid in egypt, Radio Frequency Identification Technology, rfid solutions , solutions rfid , RFID Egypt, RFID Solution Egypt,outsource, Egypt Software, RFID Asset management, Elearing,custom software development,, custom software development Egypt, offshore Egypt "
+    />
+    <meta name="author" content="Smarttechsys" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="3 days" />
+    <meta
+      property="og:title"
+      content="Software Development company in Egypt | outsourcing | offshore | RFID"
+    />
+
+    <meta
+      name="google-site-verification"
+      content="H6PBv2rhUYdX5gRjX2czZtnifUGc8QfKzvYu2AB0hNE"
+    />
+    <!-- RFID Tracking Software Industry -->
+
     <!-- Render All Elements Normally -->
-    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./style/normalize.css" />
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,12 +74,655 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,600;0,700;0,800;0,900;1,400&display=swap"
       rel="stylesheet"
     />
-    <!-- fontawesome   -->
-    <link rel="stylesheet" href="./css/all.min.css" />
-  </head>
-  <body>
-<h1>Wellcome to my site</h1>
-    <i class="fab fa-whatsapp-square"></i>
 
+    <!--  bootstrap  -->
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+
+    <!-- addfontawesome   -->
+    <link rel="stylesheet" href="./style/all.min.css" />
+
+    <!-- main css File -->
+    <link rel="stylesheet" href="./style/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body onload="onLoad()">
+    <!-- ------ start of header  --------->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="./assets/images/smart-tech.png" alt="logo" />
+          </div>
+          <div class="toggle-button d-lg-none" onclick="openNav()">
+            <span style="font-size: 30px; cursor: pointer">&#9776;</span>
+          </div>
+
+          <ul id="mySidenav">
+            <li><a class="active" href="#"> Home</a></li>
+            <li><a href="#"> About</a></li>
+            <li><a href="#"> Services</a></li>
+            <li><a href="#"> Products</a></li>
+            <li><a href="#"> Team</a></li>
+            <li><a href="#"> Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ------ end of header  -------- -->
+
+    <!-- ------ start of landing  -------->
+    <div class="landing">
+      <!-- <div class="animated-warpers">
+        <div class="shape-1"></div>
+        <div class="shape-2"></div>
+        <div class="shape-3"></div>
+        <div class="shape-4"></div>
+        <div class="shape-5"></div>
+      </div> -->
+      <div class="background-landing"></div>
+      <div class="container">
+        <div class="landing-content">
+          <h1>QUALITY IS NOT EXPENSIVE</h1>
+          <p>Custom Software Develop​ment And Outsourcing</p>
+        </div>
+      </div>
+    </div>
+    <!-- ------ end of landing  ---------->
+
+    <!-- ------ Start of  cards  -------->
+    <section>
+      <div class="cards-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="item">
+                <div class="img-container">
+                  <img src="./assets/images/OffshoreOnshore.png" alt="" />
+                </div>
+                <h3>Offshore/Onshore <br />Outsourcing</h3>
+                <p>
+                  SelectDevs Cairo office headcount is 50+ software engineer in
+                  different technologies including web app development and
+                  mobile app development <br />
+                  <br />
+                  Our team is fixable to travel anywhere including US , Europe ,
+                  Africa and middle east.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+              <div class="item">
+                <div class="img-container">
+                  <img src="./assets/images/OffshoreOnshore.png" alt="" />
+                </div>
+                <h3>
+                  Custom Software <br />
+                  Development
+                </h3>
+                <p>
+                  SmartTech Systems believes customers and Employees in
+                  transparent and open communication with
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+              <div class="item">
+                <div class="img-container">
+                  <img src="./assets/images/OffshoreOnshore.png" alt="" />
+                </div>
+                <h3>Consultation</h3>
+                <p>
+                  Commitment is the little choices every day that lead to the
+                  final results we're striving for.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="reset-margen"></div>
+    <!-- ------ End Of  cards ---------->
+
+    <section class="logos">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12">
+            <img src="./assets/images/logo.png" alt="" />
+          </div>
+          <div class="col-lg-8 col-md-12">
+            <div class="white-card">
+              <h4>
+                Excellent team will deliver excellent software to our customer.
+              </h4>
+              <p>
+                We committed to provide you with top telent software engineers
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-12">
+            <div class="d-flex justify-content-between">
+              <img src="./assets/images/badge-regular.png" alt="badge" />
+              <img src="./assets/images/top-software.png" alt="badge" />
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12 d-lg-flex justify-content-between">
+            <div class="card">
+              <div
+                class="
+                  cardHeader
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <h4 class="text-uppercase">Creative app Designs</h4>
+                <img src="./assets/images/creative@3x.png" alt="" />
+              </div>
+              <p>
+                We offers each client the luxury of getting uniquely attractive
+                designed software solutions to help the client interpret who
+                they really are among their peers.
+              </p>
+              <span></span>
+            </div>
+            <div class="card">
+              <div class="cardHeader d-flex justify-content-between">
+                <h4 class="text-uppercase">Clean code</h4>
+                <img src="./assets/images/code@3x.png" alt="" />
+              </div>
+              <p>
+                We are very selective in hiring process to make sure that we are
+                hiring the best software engineers.
+              </p>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="outsourcing">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="outsource-card outsource-card2">
+              <h3>
+                Offshore <br />
+                Outsourcing
+              </h3>
+              <p>Why our offshore office in cairo is the best choice?</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="outsource-card outsource-card1">
+              <h3>
+                Offshore <br />
+                Outsourcing
+              </h3>
+              <p>Why our offshore office in cairo is the best choice?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------- start variety-technologies ----------- -->
+
+    <section class="variety-technologies">
+      <div class="container">
+        <div class="header text-center">
+          <h1 class="text-uppercase">Variety of Technologies</h1>
+          <p>Some Development Tools & Technologies (Everyday adding more)</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-5 col-md-12">
+            <div class="panner">
+              <img
+                class="panner"
+                src="./assets/images/rectangle-2@2x.jpg"
+                alt="panner"
+              />
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-12">
+            <div class="developments-cards row">
+              <div class="col-lg-6 col-md-12">
+                <div class="card black">
+                  <h5>FrontEnd Development</h5>
+                  <div class="body">
+                    <div>
+                      Angular <br />
+                      React.js <br />
+                      Vue.js <br />
+                      <span></span>
+                    </div>
+                    <img src="./assets/icons/FrontEnDevelopment.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="card light-blue">
+                  <h5>Mobile Development</h5>
+                  <div class="body">
+                    <div>
+                      iOS / Android <br />
+                      Flutter / ReactNative <br />
+                      Xamarin <br />
+                      <span></span>
+                    </div>
+                    <img src="./assets/icons/MobileDevelopment.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="card white">
+                  <h5>BACKEnd Development</h5>
+                  <div class="body">
+                    <div>
+                      ASP.NET Core <br />
+                      Java <br />
+                      NodeJS <br />
+
+                      <span></span>
+                    </div>
+                    <img src="./assets/icons/BACKEndDevelopment.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="card dark">
+                  <h5>Desktop Development</h5>
+                  <div class="body">
+                    <div>
+                      Angular <br />
+                      React.js <br />
+                      Vue.js <br />
+                      <span></span>
+                    </div>
+                    <img src="./assets/icons/DesktopDevelopment.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------- end Key variety-technologies ----------- -->
+
+    <!-- -----------   start Why you choose us?   ----------- -->
+    <section class="choose-us">
+      <div class="">
+        <div class="header">
+          <p>Values & Features</p>
+          <h1>Why you choose us?</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <ul>
+              <li>
+                <b>Transparency: </b>
+                <p>
+                  SelectDevs believes in transparent and open communication with
+                  customers and Employees
+                </p>
+              </li>
+              <li>
+                <b>Trust: </b>
+                <p>Trust Is Granted, Not Earned.</p>
+              </li>
+              <li>
+                <b> Quality:</b>
+                <p>
+                  Developing a high quality product will be cheaper than
+                  developing a low quality product.
+                </p>
+              </li>
+              <li>
+                <b>For us Quality is:</b>
+                <p>
+                  Fitness for use <br />
+                  Exceeding customer expectations <br />
+                  Superiority to competitors A degree of Excellence
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="laptop">
+              <!-- <img src="./assets/images/laptop@2x.png" alt=""> -->
+               
+              <div>
+                <h6>NEW product</h6>
+                <div class="row">
+                  <div class="item col-6">
+                    <div class="icon">
+                      <img src="./assets/icons/research.png" alt="" />
+                    </div>
+                    <p>
+                      Research
+                      <span>
+                        select your favorite social network and share our icons
+                        with your contacts or friends
+                      </span>
+                    </p>
+                  </div>
+                  <div class="item col-6">
+                    <div class="icon">
+                      <img src="./assets/icons/lightbulb.png" alt="" />
+                    </div>
+                    <p>
+                      Research
+                      <span>
+                        select your favorite social network and share our icons
+                        with your contacts or friends
+                      </span>
+                    </p>
+                  </div> 
+                  <div class="item col-6">
+                    <div class="icon">
+                      <img src="./assets/icons/analysis.png" alt="" />
+                    </div>
+                    <p>
+                      Research
+                      <span>
+                        select your favorite social network and share our icons
+                        with your contacts or friends
+                      </span>
+                    </p>
+                  </div>
+                  <div class="item col-6">
+                    <div class="icon">
+                      <img src="./assets/icons/function.png" alt="" />
+                    </div>
+                    <p>
+                      Research
+                      <span>
+                        select your favorite social network and share our icons
+                        with your contacts or friends
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------  end Why you choose us?  --------------->
+
+    <!-- ----------- start Custom Software Development ----------- -->
+
+    <div class="container">
+      <section class="custom-software">
+        <div>
+          <h2>Custom Software Development</h2>
+          <h1>
+            We're never one-size-fits-all we work with your team to create
+            databases, websites, and mobile apps that fit exactly what your team
+            needs.
+          </h1>
+        </div>
+      </section>
+    </div>
+    <!-- ----------- end Custom Software Development ----------- -->
+
+    <!-- ----------- start Key Products ----------- -->
+
+    <section class="Key-Products">
+      <div class="container">
+        <div class="header">
+          <h6>Key Products</h6>
+          <h1>RFID , Computer Vision, RPA , AI and more</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="item">
+              <div class="icon">
+                <img src="./assets/images/rfid.png" alt="" />
+              </div>
+              <h5>RFID Asset Management</h5>
+              <p>
+                Sample text. Click to select the text box. Click again or double
+                click to start editing the text.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="item">
+              <div class="icon">
+                <img src="./assets/images/id-card.png" alt="" />
+              </div>
+              <h5>Clubs Membership</h5>
+              <p>
+                Sample text. Click to select the text box. Click again or double
+                click to start editing the text.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="item">
+              <div class="icon">
+                <img src="./assets/images/group.png" alt="" />
+              </div>
+              <h5>ANPR for Egyptian Car Plates</h5>
+              <p>
+                Sample text. Click to select the text box. Click again or double
+                click to start editing the text.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="item">
+              <div class="icon">
+                <img src="./assets/images/qr-code.png" alt="" />
+              </div>
+              <h5>Egypt National ID Auto Capture</h5>
+              <p>
+                Sample text. Click to select the text box. Click again or double
+                click to start editing the text.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------- end Key Products ----------- -->
+    <!-- ----------- start contact us ----------- -->
+
+    <section class="contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-12">
+            <h1>contact Us</h1>
+            <ul>
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/locte.png" alt="" />
+                </div>
+                <p>
+                  Address: 27 b, Mohammed Al Maqref, Al Manteqah as Sadesah,
+                  Nasr City - Cairo
+                </p>
+              </li>
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/land.png" alt="" />
+                </div>
+                <p><a href="tel:+2026775746"> Telephone: +2026775746/8/9</a></p>
+              </li>
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/phone.png" alt="" />
+                </div>
+                <p><a href="tel:+2026775746"> Mobile: +2026775746/8/9 </a></p>
+              </li>
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/phone.png" alt="" />
+                </div>
+                <p><a href="tel:+2026775746">Mobile: +2026775746/8/9</a></p>
+              </li>
+
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/mail.png" alt="" />
+                </div>
+                <p>
+                  <a href="mailto:info@smarttechsys.com">
+                    General Email:info@smarttechsys.com</a
+                  >
+                </p>
+              </li>
+              <li>
+                <div class="icon">
+                  <img src="./assets/images/mail.png" alt="" />
+                </div>
+                <p>
+                  <a href="mailto:info@smarttechsys.com">
+                    Business development Team Email:info@smarttechsys.com</a
+                  >
+                </p>
+              </li>
+
+              <li>
+                <div class="icon">
+                  <img src="./assets/images/mail.png" alt="" />
+                </div>
+                <p>
+                  <a href="mailto:info@smarttechsys.com">
+                    Careers Email:info@smarttechsys.com</a
+                  >
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-5 col-md-12">
+            <!-- google map  -->
+            <iframe
+              id="google-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.949622618098!2d31.354092815115656!3d30.06697848187419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583ddfccd31fef%3A0xdb587fa057510fb3!2zU01BUlQgVEVDSCAtINiz2YXYp9ix2Kog2KrZgw!5e0!3m2!1sen!2seg!4v1535909954880"
+              height="391px"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------- end contact us ----------- -->
+
+    <footer>
+      <div class="leading">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="logo">
+                <img src="./assets/images/logo.png" alt="" />
+              </div>
+              <p>@Copyrights SmartTech 2021</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h2>SERVICES</h2>
+              <div class="map-list">
+                <ul>
+                  <li>Plumber in Bangalore</li>
+                  <li>Electrician in Bangalore</li>
+                  <li>Carpenter in Bangalore</li>
+                  <li>Appliances Repair in Bangalore</li>
+                  <li>Pest Control in Bangalore</li>
+                  <li>Painter in Bangalore</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h2>SERVICES</h2>
+              <div class="map-list">
+                <ul>
+                  <li>AC Repair in Bangalore</li>
+                  <li>Carpet Cleaning in Bangalore</li>
+                  <li>Mansion/Civil Work in Bangalore</li>
+                  <li>Tile Granite Laying in Bangalore</li>
+                  <li>House Cleaning in Bangalore</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h2>HOMIFY HOME MAINTENANCE PACKAGES</h2>
+              <div class="map-list">
+                <ul>
+                  <li>Full House Maintenance Package</li>
+                  <li>Home Appliances Maintenance Package</li>
+                  <li>Full House Deep Cleaning</li>
+                  <li>Package Pest Control Package</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tail">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <p>About | Terms & Conditions | Privacy Policy | Blog</p>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <ul>
+                <li>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><img src="./assets/icons/facebook.png" alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><img src="./assets/icons/twitter.PNG" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><img src="./assets/icons/linkedin.PNG" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><img src="./assets/icons/p.PNG" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
+
+  <!-- --------------------- scripts ----------------- -->
+  <!--   jQuery library -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+
+  <!-- custom js -->
+  <script src="./js/custom.js"></script>
+  <!-- maps.google -->
+  <script
+    type="text/javascript"
+    src="https://maps.google.com/maps/api/js?sensor=true"
+  ></script>
 </html>
