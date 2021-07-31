@@ -1,0 +1,102 @@
+@mixin LargeScreen {
+  @media only screen and (min-width: 900px) {
+    .reset-margen {
+      margin-top: -167px;
+    }
+    header {
+      margin: 34px 0px;
+    }
+    .landing {
+      margin-top: -162px;
+      height: calc(130vh);
+      .landing-content {
+        h1 {
+          @include normal;
+        //   font-family: $Jost_font;
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 1.92;
+          letter-spacing: normal;
+          color: $white;
+          transition: 2s;
+          margin-bottom: 120px;
+        }
+        p {
+          @include normal;
+          width: 642px;
+          height: 237px;
+          font-size: 50.8px;
+          font-weight: bold;
+          line-height: 1.22;
+          letter-spacing: 1.6px;
+          color: $white;
+          text-transform: uppercase;
+          font-family: $Jost_font;
+        }
+      }
+    }
+    .cards-container {
+      background-color: $white;
+      top: -165px;
+      position: relative;
+      padding: 20px 0px;
+
+      .item {
+        img {
+          max-width: 125px;
+          margin-top: -65px;
+        }
+        h3 {
+        }
+        p {
+        }
+      }
+    }
+    .logos {
+      .row:last-of-type {
+        .card {
+          width: 45%;
+        }
+      }
+    }
+
+    .outsourcing {
+      .outsource-card {
+        p {
+          width: 400px;
+        }
+      }
+    }
+
+    .variety-technologies {
+      .header {
+        h1 {
+          font-size: 40px;
+        }
+      }
+      .panner {
+        img {
+          height: 465px;
+        }
+      }
+    }
+    .choose-us {
+      height: 850px;
+      .col-lg-6:last-of-type {
+        height: 605px;
+        align-items: flex-end;
+        display: flex;
+      }
+      ul {
+        li:first-of-type {
+          width: 200%;
+        }
+      }
+    }
+    .custom-software {
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}

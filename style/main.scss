@@ -1,6 +1,8 @@
 @import "mixens.scss";
 @import "variables.scss";
-@import "mediaQuery.scss";
+@import "large-screen.scss";
+@import "mobile-tablets-screens";
+@import "animate.scss";
 
 ul li {
   list-style: none;
@@ -24,6 +26,8 @@ p {
   margin: 0px;
   padding: 0px;
 }
+.animate {
+}
 
 /* ==================   Start Of Header ========================= */
 header {
@@ -38,6 +42,7 @@ header {
       li {
         padding: 0px 10px;
         text-transform: uppercase;
+        font-family: $Jost_font;
 
         a {
           @include headerLinkInactive;
@@ -92,6 +97,7 @@ header {
 .cards-container {
   // background-color: $white;
   border-radius: 74% 76% 0% 0%;
+  // background-image: url('../assets/images/curve.png');
 
   & .row:first-of-type {
     justify-content: space-evenly;
@@ -101,46 +107,62 @@ header {
     border-radius: 10px;
     box-shadow: 0 -12px 60px 0 rgba(0, 0, 0, 0.13);
     background-color: $white;
+    transition: 0.5s;
+    margin-top: 20%;
+    transform: rotateY(-90deg);
+
     .img-container {
       display: flex;
       justify-content: center;
     }
 
     h3 {
+      @include normal;
       color: $bold_Black;
       text-align: center;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: bold;
       text-transform: uppercase;
+      font-family: $Jost_font;
     }
     p {
+      @include normal;
       margin: 10px 31px;
       font-size: 14px;
       font-weight: 400;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
       text-align: center;
+      font-family: $arial-unicode-MS;
       color: $bold_Black;
     }
   }
 }
 
 .logos {
+  transition: 0.5s;
+  margin-top: 20%;
   background-image: url("../assets/images/section-1@2x.png");
   background-size: cover;
+  overflow: hidden;
+
   .row:first-of-type {
     padding: 90px 0px 60px;
   }
   .row:last-of-type {
-    padding-bottom: 10%;
+    padding-bottom: 5%;
+
     & > div:first-child div {
       height: 100%;
       align-items: flex-end;
+      // margin-top: -30%;
+      // transition: 1s;
+      // transition-delay: 1s;
     }
     .card:first-of-type {
       background-color: $bold_Black;
+      position: relative;
+      right: -180%;
+      transition: 1s;
+      z-index: 3;
       span {
         width: 22px;
         height: 3px;
@@ -151,6 +173,11 @@ header {
     }
     .card:last-of-type {
       background-color: $light_blue;
+      position: relative;
+      right: -100%;
+      transition: 1s;
+      transition-delay: 0.4s;
+
       span {
         width: 22px;
         height: 3px;
@@ -162,15 +189,23 @@ header {
     .card {
       padding: 46px 37px 43px 29px;
       border-radius: 10px;
+      margin: 24px 0px;
+
       p {
+        @include normal;
+        font-family: $arial-unicode-MS;
         color: $white;
         font-size: 15px;
       }
       .cardHeader {
         margin-bottom: 30px;
         h4 {
+          @include normal;
+          font-family: $Jost_font;
           color: $white;
           font-weight: bold;
+          line-height: 1;
+          font-size: 20px;
         }
         img {
           max-width: 90px;
@@ -188,30 +223,57 @@ header {
     border-radius: 10px;
     box-shadow: 0 -12px 60px 0 rgba(0, 0, 0, 0.35);
     background-color: $white;
+    transition: 1s;
+    position: relative;
+    top: -200%;
+    transition-delay: 0.3s;
     h4 {
+      @include normal;
       color: $bold_Black;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: $Jost_font;
+      text-transform: uppercase;
     }
     p {
+      @include normal;
+      color: $bold_Black;
       font-size: 20px;
+      font-family: $arial-unicode-MS;
     }
   }
 }
 .outsourcing {
   margin: 80px 0px;
+  margin-top: 20%;
+  transition: 1s;
+  .col-lg-6:hover {
+    .rotated-overlay {
+      // position: absolute;
+      // width: 100%;
+      // height: 100%;
+      // background-color: $light_blue;
+    }
+  }
   .outsource-card {
     box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.5);
     background-size: cover;
     padding: 244px 62.7px 30px 37px;
     border-radius: 10px;
     h3 {
+      @include normal;
+      text-transform: uppercase;
+      font-family: $Jost_font;
       color: $white;
       font-size: 33.6px;
       font-weight: bold;
       margin-bottom: 13px;
     }
     p {
+      @include normal;
+      font-family: $arial-unicode-MS;
       color: #ffffffd1;
-      font-size: 20px;
+      font-size: 24px;
     }
   }
   .outsource-card2 {
@@ -221,8 +283,11 @@ header {
     background-image: url("/assets/images/outsource2.png");
   }
 }
+
 .variety-technologies {
   background-color: $light-gray;
+  margin-top: 22%;
+  transition: 1s;
   .header {
     padding: 60px 0px 20px 0px;
     h1 {
@@ -237,11 +302,12 @@ header {
     }
   }
   .panner {
+    transform: translateY(70px);
+    transition: 2s;
     img {
       box-shadow: 0 22px 34px 0 $shadow-color;
       border-radius: 10px;
       width: 100%;
-      height: 465px;
     }
   }
   .developments-cards {
@@ -250,6 +316,8 @@ header {
       padding: 40px 40px 20px;
       border-radius: 10px;
       margin-bottom: 22px;
+      transform: translateY(70px);
+      transition: 2s;
 
       h5 {
         @include normal;
@@ -264,7 +332,7 @@ header {
       }
       .body {
         @include normal;
-        font-family: $Jost_font;
+        // font-family: $Jost_font;
         display: flex;
         justify-content: space-between;
         color: $white;
@@ -289,6 +357,7 @@ header {
     }
     .light-blue {
       background-color: $light_blue;
+
       img {
         height: 70px;
       }
@@ -316,14 +385,16 @@ header {
       }
       background-color: $dark;
     }
-  } 
+  }
 }
- 
+  
 .choose-us {
   background-image: url("../assets/images/bg-wall@2x.png");
   background-size: cover;
   padding: 16px 30px 230px;
-  
+  padding-top: 20%;
+  transition: 1s;
+
   .header {
     padding: 50px 0px 20px 0px;
     p {
@@ -336,11 +407,14 @@ header {
     h1 {
       @include blackHeader;
     }
-  } 
+  }
   ul {
     margin: 0px;
-    
+
     li {
+      margin-bottom: 30px;
+      opacity: 0;
+      transition: 1.5s;
       b {
         @include normal;
         color: $light_blue;
@@ -432,7 +506,7 @@ header {
       }
     }
   }
-}
+}  
 
 .custom-software {
   display: flex;
@@ -444,6 +518,10 @@ header {
   box-shadow: 0 22px 34px 0 #21252936;
   border-radius: 35px;
   padding: 115px 0px 121px 85px;
+  margin: 70px 0px;
+  margin-top: 20%;
+  transition: 1s;
+ 
   h2 {
     color: $light_blue;
     font-size: 30px;
@@ -459,16 +537,24 @@ header {
     text-transform: uppercase;
     line-height: normal;
     font-family: $Jost_font;
+    opacity: 0;
+    margin-top: 20%;
+    transition: 1s;
   }
-}
+} 
 .Key-Products {
   background-image: url("../assets/images/blue-bg.png");
   background-color: $dark;
   padding: 80px 0px;
   margin-top: 30px;
+  margin-top: 20%;
+  transition: 1s;
+  overflow: hidden;
 
   .header {
     text-align: center;
+    position: relative;
+    right:  -150%;
     h6 {
       @include normal;
       font-size: 30px;
@@ -487,6 +573,10 @@ header {
     }
   }
   .item {
+  & * { 
+    opacity: 0;
+    transition: 1s;
+   }
     .icon {
       padding: 10px;
       background-color: $white;
@@ -523,10 +613,11 @@ header {
     }
   }
 }
-
+ 
 .contact-us {
   background-color: #f2f4f8;
-
+  margin-top: 20%;
+  transition: 1s;
   iframe {
     border: 0;
     width: 100%;
@@ -544,10 +635,12 @@ header {
     text-transform: uppercase;
   }
   ul {
-    padding: 0px;
+    padding: 0px; 
     li {
       display: flex;
-      margin: 10px 0px;
+      margin: 10px 0px; 
+      opacity: 0;
+      transition: 1s;
       p {
         @include normal;
         font-size: 15px;
@@ -560,12 +653,15 @@ header {
       }
     }
   }
-}
+} 
 
 footer {
-  .leading {
-    background-color: $bold_Black;
+  .f-leading { 
+    background-color: $bold_Black;     
+    transition: 1s;
     padding: 35px 0px;
+    padding-top: 30%;
+   
     .logo {
       img {
         max-width: 70px;
@@ -589,6 +685,7 @@ footer {
     }
     ul {
       padding: 0px;
+      opacity: 0;
       li {
         color: $site-map-list-color;
         line-height: 2.57;
@@ -628,4 +725,6 @@ footer {
   }
 }
 
-@include mediaQuery;
+@include LargeScreen;
+@include MobAndTap;
+@include animation;

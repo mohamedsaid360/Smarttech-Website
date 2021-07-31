@@ -8,6 +8,16 @@
   src: url("../fonts/arial-unicode-ms.ttf");
 }
 
+@font-face {
+  font-family: "Arial Unicode MS";
+  src: url("../fonts/arial-unicode-ms.ttf");
+}
+
+@font-face {
+  font-family: "Arial Unicode MS";
+  src: url("../fonts/arial-unicode-ms.ttf");
+}
+
 ul li {
   list-style: none;
 }
@@ -55,6 +65,7 @@ header nav ul {
 header nav ul li {
   padding: 0px 10px;
   text-transform: uppercase;
+  font-family: "Jost";
 }
 
 header nav ul li a {
@@ -153,6 +164,11 @@ header nav ul li .active::after {
   -webkit-box-shadow: 0 -12px 60px 0 rgba(0, 0, 0, 0.13);
           box-shadow: 0 -12px 60px 0 rgba(0, 0, 0, 0.13);
   background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 20%;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
 }
 
 .cards-container .item .img-container {
@@ -165,28 +181,40 @@ header nav ul li .active::after {
 }
 
 .cards-container .item h3 {
-  color: #212529;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.cards-container .item p {
-  margin: 10px 31px;
-  font-size: 14px;
-  font-weight: 400;
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  color: #212529;
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Jost";
+}
+
+.cards-container .item p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 10px 31px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Arial Unicode MS";
   color: #212529;
 }
 
 .logos {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 20%;
   background-image: url("../assets/images/section-1@2x.png");
   background-size: cover;
+  overflow: hidden;
 }
 
 .logos .row:first-of-type {
@@ -194,7 +222,7 @@ header nav ul li .active::after {
 }
 
 .logos .row:last-of-type {
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 .logos .row:last-of-type > div:first-child div {
@@ -206,6 +234,11 @@ header nav ul li .active::after {
 
 .logos .row:last-of-type .card:first-of-type {
   background-color: #212529;
+  position: relative;
+  right: -180%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 3;
 }
 
 .logos .row:last-of-type .card:first-of-type span {
@@ -218,6 +251,12 @@ header nav ul li .active::after {
 
 .logos .row:last-of-type .card:last-of-type {
   background-color: #006ff3;
+  position: relative;
+  right: -100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .logos .row:last-of-type .card:last-of-type span {
@@ -231,9 +270,16 @@ header nav ul li .active::after {
 .logos .row:last-of-type .card {
   padding: 46px 37px 43px 29px;
   border-radius: 10px;
+  margin: 24px 0px;
 }
 
 .logos .row:last-of-type .card p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
   color: white;
   font-size: 15px;
 }
@@ -243,8 +289,16 @@ header nav ul li .active::after {
 }
 
 .logos .row:last-of-type .card .cardHeader h4 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Jost";
   color: white;
   font-weight: bold;
+  line-height: 1;
+  font-size: 20px;
 }
 
 .logos .row:last-of-type .card .cardHeader img {
@@ -262,18 +316,43 @@ header nav ul li .active::after {
   -webkit-box-shadow: 0 -12px 60px 0 rgba(0, 0, 0, 0.35);
           box-shadow: 0 -12px 60px 0 rgba(0, 0, 0, 0.35);
   background-color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: relative;
+  top: -200%;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .logos .white-card h4 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   color: #212529;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Jost";
+  text-transform: uppercase;
 }
 
 .logos .white-card p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #212529;
   font-size: 20px;
+  font-family: "Arial Unicode MS";
 }
 
 .outsourcing {
   margin: 80px 0px;
+  margin-top: 20%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .outsourcing .outsource-card {
@@ -285,6 +364,13 @@ header nav ul li .active::after {
 }
 
 .outsourcing .outsource-card h3 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  font-family: "Jost";
   color: white;
   font-size: 33.6px;
   font-weight: bold;
@@ -292,8 +378,14 @@ header nav ul li .active::after {
 }
 
 .outsourcing .outsource-card p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
   color: #ffffffd1;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .outsourcing .outsource-card2 {
@@ -306,6 +398,9 @@ header nav ul li .active::after {
 
 .variety-technologies {
   background-color: #f2f4f8;
+  margin-top: 22%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .variety-technologies .header {
@@ -338,12 +433,18 @@ header nav ul li .active::after {
   font-family: "Arial Unicode MS";
 }
 
+.variety-technologies .panner {
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
 .variety-technologies .panner img {
   -webkit-box-shadow: 0 22px 34px 0 #21252936;
           box-shadow: 0 22px 34px 0 #21252936;
   border-radius: 10px;
   width: 100%;
-  height: 465px;
 }
 
 .variety-technologies .developments-cards .card {
@@ -352,6 +453,10 @@ header nav ul li .active::after {
   padding: 40px 40px 20px;
   border-radius: 10px;
   margin-bottom: 22px;
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .variety-technologies .developments-cards .card h5 {
@@ -376,7 +481,6 @@ header nav ul li .active::after {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  font-family: "Jost";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,6 +553,9 @@ header nav ul li .active::after {
   background-image: url("../assets/images/bg-wall@2x.png");
   background-size: cover;
   padding: 16px 30px 230px;
+  padding-top: 20%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .choose-us .header {
@@ -483,6 +590,13 @@ header nav ul li .active::after {
 
 .choose-us ul {
   margin: 0px;
+}
+
+.choose-us ul li {
+  margin-bottom: 30px;
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
 }
 
 .choose-us ul li b {
@@ -622,6 +736,10 @@ header nav ul li .active::after {
           box-shadow: 0 22px 34px 0 #21252936;
   border-radius: 35px;
   padding: 115px 0px 121px 85px;
+  margin: 70px 0px;
+  margin-top: 20%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .custom-software h2 {
@@ -640,6 +758,10 @@ header nav ul li .active::after {
   text-transform: uppercase;
   line-height: normal;
   font-family: "Jost";
+  opacity: 0;
+  margin-top: 20%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .Key-Products {
@@ -647,10 +769,16 @@ header nav ul li .active::after {
   background-color: #232146;
   padding: 80px 0px;
   margin-top: 30px;
+  margin-top: 20%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  overflow: hidden;
 }
 
 .Key-Products .header {
   text-align: center;
+  position: relative;
+  right: -150%;
 }
 
 .Key-Products .header h6 {
@@ -676,6 +804,12 @@ header nav ul li .active::after {
   margin-bottom: 60px;
   font-family: "Jost";
   text-transform: uppercase;
+}
+
+.Key-Products .item * {
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .Key-Products .item .icon {
@@ -732,6 +866,9 @@ header nav ul li .active::after {
 
 .contact-us {
   background-color: #f2f4f8;
+  margin-top: 20%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .contact-us iframe {
@@ -764,6 +901,9 @@ header nav ul li .active::after {
   display: -ms-flexbox;
   display: flex;
   margin: 10px 0px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .contact-us ul li p {
@@ -782,16 +922,19 @@ header nav ul li .active::after {
   color: inherit;
 }
 
-footer .leading {
+footer .f-leading {
   background-color: #212529;
+  -webkit-transition: 1s;
+  transition: 1s;
   padding: 35px 0px;
+  padding-top: 30%;
 }
 
-footer .leading .logo img {
+footer .f-leading .logo img {
   max-width: 70px;
 }
 
-footer .leading p:first-of-type {
+footer .f-leading p:first-of-type {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -803,7 +946,7 @@ footer .leading p:first-of-type {
   margin: 20px 0px;
 }
 
-footer .leading h2 {
+footer .f-leading h2 {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -816,16 +959,17 @@ footer .leading h2 {
   margin-bottom: 45px;
 }
 
-footer .leading ul {
+footer .f-leading ul {
   padding: 0px;
+  opacity: 0;
 }
 
-footer .leading ul li {
+footer .f-leading ul li {
   color: #9fa3a7;
   line-height: 2.57;
 }
 
-footer .leading .last h2 {
+footer .f-leading .last h2 {
   margin-bottom: 20px;
 }
 
@@ -866,6 +1010,90 @@ footer .tail ul li a img {
   max-width: 30px;
 }
 
+@media only screen and (min-width: 900px) {
+  .reset-margen {
+    margin-top: -167px;
+  }
+  header {
+    margin: 34px 0px;
+  }
+  .landing {
+    margin-top: -162px;
+    height: calc(130vh);
+  }
+  .landing .landing-content h1 {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.92;
+    letter-spacing: normal;
+    color: white;
+    -webkit-transition: 2s;
+    transition: 2s;
+    margin-bottom: 120px;
+  }
+  .landing .landing-content p {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    width: 642px;
+    height: 237px;
+    font-size: 50.8px;
+    font-weight: bold;
+    line-height: 1.22;
+    letter-spacing: 1.6px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Jost";
+  }
+  .cards-container {
+    background-color: white;
+    top: -165px;
+    position: relative;
+    padding: 20px 0px;
+  }
+  .cards-container .item img {
+    max-width: 125px;
+    margin-top: -65px;
+  }
+  .logos .row:last-of-type .card {
+    width: 45%;
+  }
+  .outsourcing .outsource-card p {
+    width: 400px;
+  }
+  .variety-technologies .header h1 {
+    font-size: 40px;
+  }
+  .variety-technologies .panner img {
+    height: 465px;
+  }
+  .choose-us {
+    height: 850px;
+  }
+  .choose-us .col-lg-6:last-of-type {
+    height: 605px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .choose-us ul li:first-of-type {
+    width: 200%;
+  }
+  .custom-software h2 {
+    font-size: 30px;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   header {
     overflow-x: hidden;
@@ -873,17 +1101,15 @@ footer .tail ul li a img {
   header .container {
     max-width: -webkit-fill-available;
   }
-  header .container nav {
-    padding: 20px 0px;
-  }
   header .container nav .openSidenav {
     width: 220px;
     z-index: 2;
     padding: 25px 35px;
+    margin-right: -4%;
   }
   header .container nav ul {
     display: block;
-    height: calc(100vh);
+    height: calc(94vh);
     background: #212529;
     padding: 0px;
     z-index: -1;
@@ -918,11 +1144,29 @@ footer .tail ul li a img {
     color: white;
     text-transform: uppercase;
   }
+  .cards-container {
+    margin-top: 15%;
+  }
   .cards-container .item {
-    margin: 10px 0px;
+    margin: 20px 0px;
   }
   .cards-container .item img {
     max-width: 100px;
+  }
+  .logos .row:first-of-type .col-lg-4:first-of-type {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 35px;
+  }
+  .logos .card:last-of-type span {
+    margin: 30px 169px 0 0;
+  }
+  .outsourcing .outsource-card2 {
+    margin-bottom: 40px;
   }
   .variety-technologies .panner {
     -webkit-box-pack: center;
@@ -945,16 +1189,23 @@ footer .tail ul li a img {
     height: 455px;
     padding-left: 35px;
   }
+  .custom-software h1 {
+    font-size: 20px;
+  }
+  .custom-software h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
   footer .logo {
     text-align: center;
   }
-  footer .leading p:first-of-type {
+  footer .f-leading p:first-of-type {
     text-align: center;
   }
-  footer .leading h2 {
+  footer .f-leading h2 {
     margin: 10px 20px;
   }
-  footer .leading .map-list {
+  footer .f-leading .map-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -973,70 +1224,224 @@ footer .tail ul li a img {
   }
 }
 
-@media only screen and (min-width: 900px) {
-  .reset-margen {
-    margin-top: -167px;
+.active .cards-container .item {
+  margin-top: unset;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.active .logos {
+  margin-top: unset;
+}
+
+.active .logos .white-card {
+  top: 0%;
+}
+
+.active .logos .row:last-of-type .card:last-of-type {
+  right: 0%;
+}
+
+.active .logos .row:last-of-type .card:first-of-type {
+  right: 0%;
+}
+
+.active .logos .row:last-of-type > div:first-child div {
+  margin-top: 0%;
+}
+
+.active .outsourcing {
+  margin-top: 80px;
+}
+
+.active .variety-technologies {
+  margin-top: 0%;
+}
+
+.active .variety-technologies .panner {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.active .variety-technologies .developments-cards .card {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.active .choose-us {
+  padding-top: 16px;
+}
+
+.active .choose-us ul li {
+  opacity: 1;
+}
+
+.active .custom-software {
+  margin-top: 70px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.active .custom-software h1 {
+  margin-top: 0%;
+  opacity: 1;
+}
+
+.active .Key-Products {
+  margin-top: 0%;
+}
+
+.active .Key-Products .header {
+  right: 0%;
+}
+
+.active .Key-Products .col-lg-3 .item * {
+  opacity: 1;
+}
+
+.active .contact-us {
+  margin-top: 0%;
+}
+
+.active .contact-us ul li {
+  opacity: 1;
+}
+
+.active .f-leading {
+  padding-top: 35px;
+}
+
+.active .f-leading ul {
+  opacity: 1;
+}
+
+.cards-container .col-lg-4:nth-of-type(1) .item {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.cards-container .col-lg-4:nth-of-type(2) .item {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.cards-container .col-lg-4:nth-of-type(3) .item {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.choose-us ul li:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.choose-us ul li:nth-of-type(2) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.choose-us ul li:nth-of-type(3) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+.choose-us ul li:nth-of-type(4) {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+.Key-Products .col-lg-3:nth-of-type(1) .item * {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.Key-Products .col-lg-3:nth-of-type(2) .item * {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.Key-Products .col-lg-3:nth-of-type(3) .item * {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.Key-Products .col-lg-3:nth-of-type(4) .item * {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.contact-us ul li:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.contact-us ul li:nth-of-type(2) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.contact-us ul li:nth-of-type(3) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+.contact-us ul li:nth-of-type(4) {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+.contact-us ul li:nth-of-type(5) {
+  -webkit-transition-delay: 1.7s;
+          transition-delay: 1.7s;
+}
+
+.contact-us ul li:nth-of-type(6) {
+  -webkit-transition-delay: 1.9s;
+          transition-delay: 1.9s;
+}
+
+.contact-us ul li:nth-of-type(7) {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
   }
-  header {
-    margin: 34px 0px;
+  to {
+    width: 100%;
   }
-  .landing {
-    margin-top: -162px;
-    height: calc(130vh);
+}
+@keyframes typing {
+  from {
+    width: 0;
   }
-  .landing .landing-content h1 {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 1.92;
-    letter-spacing: normal;
-    color: white;
-    -webkit-transition: 2s;
-    transition: 2s;
-    margin-bottom: 120px;
+  to {
+    width: 100%;
   }
-  .landing .landing-content p {
-    width: 642px;
-    height: 237px;
-    font-size: 50.8px;
-    font-weight: bold;
-    line-height: 1.22;
-    letter-spacing: 1.6px;
-    color: white;
-    text-transform: uppercase;
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
-  .cards-container {
-    background-color: white;
-    top: -165px;
-    position: relative;
-    padding: 20px 0px;
+  50% {
+    border-color: #006ff3;
   }
-  .cards-container .item img {
-    max-width: 125px;
-    margin-top: -65px;
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
-  .logos .row:last-of-type .card {
-    width: 45%;
-  }
-  .variety-technologies .header h1 {
-    font-size: 40px;
-  }
-  .choose-us {
-    height: 850px;
-  }
-  .choose-us .col-lg-6:last-of-type {
-    height: 605px;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .choose-us ul li:first-of-type {
-    width: 180%;
-  }
-  .custom-software h2 {
-    font-size: 30px;
+  50% {
+    border-color: #006ff3;
   }
 }
 /*# sourceMappingURL=main.css.map */
