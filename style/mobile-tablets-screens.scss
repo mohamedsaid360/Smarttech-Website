@@ -8,7 +8,12 @@
 
         nav {
           // padding: 20px 0px;
-
+          .logo {
+            margin-top: 5%;
+          }
+          .toggle-button {
+            margin-top: 5%;
+          }
           & .openSidenav {
             width: 220px;
             z-index: 2;
@@ -125,7 +130,7 @@
       }
     }
 
-    footer{
+    footer {
       .logo {
         text-align: center;
       }

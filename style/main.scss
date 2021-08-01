@@ -30,7 +30,7 @@ p {
 }
 
 /* ==================   Start Of Header ========================= */
-header {
+header { 
   nav {
     display: flex;
     .logo {
@@ -277,10 +277,10 @@ header {
     }
   }
   .outsource-card2 {
-    background-image: url("/assets/images/outsource.png");
+    background-image: url("../assets/images/outsource.png");
   }
   .outsource-card1 {
-    background-image: url("/assets/images/outsource2.png");
+    background-image: url("../assets/images/outsource2.png");
   }
 }
 

@@ -389,11 +389,11 @@ header nav ul li .active::after {
 }
 
 .outsourcing .outsource-card2 {
-  background-image: url("/assets/images/outsource.png");
+  background-image: url("../assets/images/outsource.png");
 }
 
 .outsourcing .outsource-card1 {
-  background-image: url("/assets/images/outsource2.png");
+  background-image: url("../assets/images/outsource2.png");
 }
 
 .variety-technologies {
@@ -1100,6 +1100,12 @@ footer .tail ul li a img {
   }
   header .container {
     max-width: -webkit-fill-available;
+  }
+  header .container nav .logo {
+    margin-top: 5%;
+  }
+  header .container nav .toggle-button {
+    margin-top: 5%;
   }
   header .container nav .openSidenav {
     width: 220px;
