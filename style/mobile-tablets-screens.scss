@@ -2,7 +2,9 @@
   @media only screen and (max-width: 900px) {
     header {
       overflow-x: hidden;
-
+      position: absolute;
+      right: 0px;
+      width: 100%;
       .container {
         max-width: -webkit-fill-available;
 
@@ -35,6 +37,20 @@
               a {
                 color: $white;
               }
+
+              .services-minus {
+                background: $white;
+                right: 1px;
+
+                ul {
+                  display: unset;
+                  li {
+                    a {
+                      color: #212529;
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -42,8 +58,6 @@
     }
 
     .landing {
-      position: absolute;
-      top: 0px;
       height: calc(90vh);
 
       .landing-content {
@@ -69,7 +83,7 @@
       margin-top: 15%;
 
       .item {
-        margin: 20px 0px;
+        margin: 70px 0px;
 
         img {
           max-width: 100px;
@@ -153,6 +167,81 @@
         }
         ul {
           padding: 20px 0px;
+        }
+      }
+    }
+    .inner-page-panner {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .team-container {
+      margin-top: -10%;
+      padding: 90px 15px;
+
+      .team-card {
+        margin-top: 20%;
+        transition: 2s;
+        .member-image {
+          img {
+            width: 120px;
+            border-radius: 50%;
+            margin-top: -16%;
+            height: 120px;
+          }
+        }
+      }
+    }
+    .products {
+      padding: 90px 12px;
+    }
+    .outsourcing-page {
+      .page-content {
+        top: -30px;
+
+        .outsourcing-types {
+          img {
+            margin-bottom: 50px;
+          }
+          .item-definition {
+            margin-bottom: 30px;
+          }
+          item:last-of-type img {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+    .our-services-page {
+      .our-services {
+        .card {
+          margin: 20px 5px;
+        }
+      }
+    }
+
+    .consulting-services-page {
+      .page-content {
+        top: -30px;
+
+        .consulting-types {
+          img {
+            margin-bottom: 50px;
+          }
+          .item-definition {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+    .contact-us-page {
+      #contact {
+        .info {
+          margin-top: 10%;
+          ul {
+            padding: 0px;
+          }
         }
       }
     }

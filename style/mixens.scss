@@ -21,7 +21,7 @@
   display: inline-block;
 }
 @mixin coolHeaderBorderNaveLink {
-  content: "";
+  content: ""; 
   display: block;
   width: 0;
   height: 4px;
@@ -42,7 +42,38 @@
   font-weight: 800;
   letter-spacing: -1.1px;
   text-align: center;
-  color: $regylar-black;
+  color: $regular-black;
   font-family: $Jost_font;
   text-transform: uppercase;
 }
+
+@mixin justifyAlignCenter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin HideScroll {
+ 
+  &::-webkit-scrollbar {
+    width: 0px !important;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: transparent !important;;
+    border: none !important;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background:transparent !important;;
+  }
+  }
+  

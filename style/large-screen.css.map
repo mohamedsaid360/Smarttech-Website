@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "large-screen.scss"
+    ],
+    "names": [],
+    "file": "large-screen.css"
+}

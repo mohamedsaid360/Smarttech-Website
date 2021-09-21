@@ -1,18 +1,60 @@
 @mixin LargeScreen {
   @media only screen and (min-width: 900px) {
-    .reset-margen {
-      margin-top: -167px;
+    .reset-margin {
+      margin-top: -195px;
     }
     header {
-      margin: 34px 0px;
+      margin: 35px 0px;
+      #ServicesMinus {
+        position: relative;
+      }
+      .services-minus {
+        background: white;
+        width: 205%;
+        top: 50px;
+
+
+        ul {
+          display: grid;
+        }
+      }
     }
+
+    .scrollable-header {
+      background: white;
+      margin-top: 0px;
+      position: fixed;
+      top: 0%;
+      width: 100%;
+      height: 73px;
+      // overflow: hidden;
+      padding: 12px;
+      z-index: 11;
+      box-shadow: -1px 6px 10px 5px #554f4f2b;
+
+      ul {
+        li {
+          :hover {
+            color: $bold_Black;
+          }
+          .active {
+            color: $bold_Black;
+          }
+          .services-minus{
+            top: 70px;
+
+          }
+        }
+      }
+    }
+
     .landing {
       margin-top: -162px;
       height: calc(130vh);
       .landing-content {
         h1 {
           @include normal;
-        //   font-family: $Jost_font;
+          //   font-family: $Jost_font;
           font-size: 30px;
           font-weight: 500;
           line-height: 1.92;
@@ -35,6 +77,7 @@
         }
       }
     }
+
     .cards-container {
       background-color: $white;
       top: -165px;
@@ -52,6 +95,7 @@
         }
       }
     }
+
     .logos {
       .row:last-of-type {
         .card {
@@ -80,6 +124,7 @@
         }
       }
     }
+
     .choose-us {
       height: 850px;
       .col-lg-6:last-of-type {
@@ -93,9 +138,122 @@
         }
       }
     }
+
     .custom-software {
       h2 {
         font-size: 30px;
+      }
+    }
+
+    .inner-page-panner {
+      position: relative;
+      top: -163px;
+      p {
+        font-size: 25px;
+      }
+    }
+
+    .team-container {
+      border-top-left-radius: 30px;
+      position: relative;
+      top: -30px;
+      background: $light-gray;
+      border-top-right-radius: 30px;
+      margin-top: -167px;
+      padding: 125px 65px;
+
+      .team-card {
+        border-radius: 19.7px;
+        background-color: $white;
+        border-radius: 30px;
+        padding: 0px 0px 40px;
+        margin-bottom: 100px;
+        box-shadow: 0px 0px 10px 2px $shadow-color;
+        margin-top: 65%;
+        transition: 2s;
+        .member-image {
+          text-align: center;
+
+          img {
+            width: 150px;
+            border-radius: 50%;
+            margin-top: -26%;
+            height: 150px;
+          }
+        }
+        h5 {
+          @include normal;
+          font-weight: bold;
+          font-family: $Jost_font;
+          text-align: center;
+          color: $bold_Black;
+          padding: 20px 0px 0px;
+        }
+        h6 {
+          @include normal;
+          font-weight: bold;
+          font-family: $Jost_font;
+          text-align: center;
+          color: $blue;
+        }
+      }
+    }
+
+    .products {
+      margin-top: -167px;
+    }
+
+    .outsourcing-page {
+      .outsourcing-types {
+        .item:nth-of-type(1),
+        .item:nth-of-type(3) {
+          img {
+            right: -200%;
+          }
+          .item-definition {
+            left: -200%;
+          }
+        }
+
+        .item:nth-of-type(2),
+        .item:nth-of-type(4) {
+          .row {
+            flex-direction: row-reverse;
+          }
+          img {
+            left: -200%;
+          }
+          .item-definition {
+            right: -200%;
+          }
+        }
+      }
+    }
+
+    .consulting-services-page {
+      .consulting-types {
+        .item:nth-of-type(1),
+        .item:nth-of-type(3) {
+          img {
+            right: -200%;
+          }
+          .item-definition {
+            left: -200%;
+          }
+        }
+
+        .item:nth-of-type(2),
+        .item:nth-of-type(4) {
+          .row {
+            flex-direction: row-reverse;
+          }
+          img {
+            left: -200%;
+          }
+          .item-definition {
+            right: -200%;
+          }
+        }
       }
     }
   }

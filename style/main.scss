@@ -30,9 +30,12 @@ p {
 }
 
 /* ==================   Start Of Header ========================= */
-header { 
+header {
   nav {
     display: flex;
+    .no-word-logo {
+      display: none;
+    }
     .logo {
       margin-right: auto;
     }
@@ -43,7 +46,7 @@ header {
         padding: 0px 10px;
         text-transform: uppercase;
         font-family: $Jost_font;
-
+        position: relative;
         a {
           @include headerLinkInactive;
           &:hover {
@@ -64,8 +67,43 @@ header {
           width: 100%;
           background: $blue;
         }
+
+        .services-minus {
+          position: absolute;
+          display: none;
+          padding: 20px 8px;
+          border-radius: 15px;
+          ul {
+            padding: 0px;
+            li {
+              padding: 5px 2px;
+              cursor: pointer;
+
+              a {
+                @include headerLinkInactive;
+                font-size: 13px;
+                &::after {
+                  @include coolHeaderBorderNaveLink;
+                }
+                &:hover::after {
+                  width: 100%;
+                  background: $blue;
+                }
+              }
+            }
+          }
+        }
       }
     }
+  }
+}
+.scrollable-header {
+  .no-word-logo {
+    display: block;
+    max-width: 73px;
+  }
+  .normal-logo {
+    display: none;
   }
 }
 /* =======================================  End Of Header  ================================== */
@@ -81,7 +119,7 @@ header {
   align-items: center;
   transition: 1s;
   .background-landing {
-    background-image: url(../assets/images/banner-home@3x.webp);
+    background-image: url(../assets/images/banner-home@3x.png);
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -387,7 +425,7 @@ header {
     }
   }
 }
-  
+
 .choose-us {
   background-image: url("../assets/images/bg-wall@2x.png");
   background-size: cover;
@@ -506,7 +544,7 @@ header {
       }
     }
   }
-}  
+}
 
 .custom-software {
   display: flex;
@@ -521,7 +559,7 @@ header {
   margin: 70px 0px;
   margin-top: 20%;
   transition: 1s;
- 
+
   h2 {
     color: $light_blue;
     font-size: 30px;
@@ -541,7 +579,7 @@ header {
     margin-top: 20%;
     transition: 1s;
   }
-} 
+}
 .Key-Products {
   background-image: url("../assets/images/blue-bg.png");
   background-color: $dark;
@@ -554,7 +592,7 @@ header {
   .header {
     text-align: center;
     position: relative;
-    right:  -150%;
+    right: -150%;
     h6 {
       @include normal;
       font-size: 30px;
@@ -573,10 +611,10 @@ header {
     }
   }
   .item {
-  & * { 
-    opacity: 0;
-    transition: 1s;
-   }
+    & * {
+      opacity: 0;
+      transition: 1s;
+    }
     .icon {
       padding: 10px;
       background-color: $white;
@@ -613,7 +651,7 @@ header {
     }
   }
 }
- 
+
 .contact-us {
   background-color: #f2f4f8;
   margin-top: 20%;
@@ -635,10 +673,10 @@ header {
     text-transform: uppercase;
   }
   ul {
-    padding: 0px; 
+    padding: 0px;
     li {
       display: flex;
-      margin: 10px 0px; 
+      margin: 10px 0px;
       opacity: 0;
       transition: 1s;
       p {
@@ -653,15 +691,15 @@ header {
       }
     }
   }
-} 
+}
 
 footer {
-  .f-leading { 
-    background-color: $bold_Black;     
+  .f-leading {
+    background-color: $bold_Black;
     transition: 1s;
     padding: 35px 0px;
-    padding-top: 30%;
-   
+    // padding-top: 30%;
+
     .logo {
       img {
         max-width: 70px;
@@ -725,6 +763,648 @@ footer {
   }
 }
 
+// ======================== Start Of Inner Pages  ========================
+
+.inner-page-panner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/products-images/banner@2x.png");
+  height: 430px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: 2s;
+  .content {
+    color: white;
+    // text-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+    text-align: center;
+    h3 {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 11px;
+    }
+  }
+}
+
+//  --------------------  Start Of PRODUCTS Page   --------------------
+
+.products {
+  border-top-left-radius: 30px;
+  position: relative;
+  top: -30px;
+  background: white;
+  border-top-right-radius: 30px;
+  padding: 90px 0px;
+
+  .product {
+    box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19);
+    height: 450px;
+    border-radius: 10px;
+    margin: 25px 0px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      height: 230px;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: 2s;
+    }
+    h2 {
+      @include normal;
+      font-weight: bold;
+      font-family: $Jost_font;
+      color: $bold_Black;
+      line-height: 1.1;
+      font-size: 21.8px;
+      padding: 25px 25px 10px;
+    }
+    p {
+      @include normal;
+      font-family: $arial-unicode-MS;
+      color: $bold_Black;
+      font-size: 15.6px;
+      padding: 0px 25px;
+    }
+
+    .blue-overlay {
+      background-color: $blue;
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      top: 99%;
+      transition: 1s;
+      z-index: 1;
+
+      b {
+        font-size: 15px;
+        color: $white;
+        font-family: $Jost_font;
+        display: block;
+        margin: 2px 25px 0px;
+        transform: scaleY(0.8);
+        a {
+          color: inherit;
+          cursor: pointer;
+        }
+        span {
+          background: $white;
+          display: block;
+          width: 22px;
+          height: 2px;
+          border-radius: 1.5px;
+          margin: 5px 0px;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}
+
+.enterprise-system {
+  background-color: $light-gray;
+  h1 {
+    @include normal;
+    font-family: $Jost_font;
+    font-weight: 800;
+    letter-spacing: -1.1px;
+    padding: 35px 0px;
+  }
+  .cards-container {
+    top: 0px;
+    background-color: inherit;
+    border-radius: unset;
+    padding: 45px 0px;
+
+    .img-container {
+      .img {
+        background: $blue;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        @include justifyAlignCenter;
+        margin: -50px 0px 30px;
+
+        img {
+          max-width: 40px;
+          margin: 0px;
+        }
+      }
+      & img[alt="Convo Ai"] {
+        max-width: 50px;
+      }
+    }
+
+    .read-more {
+      @include normal;
+      @include justifyAlignCenter;
+      font-family: $Jost_font;
+      margin-top: 20%;
+      color: $regular-black;
+      cursor: pointer;
+    }
+    .col-lg-4:nth-of-type(2) .read-more {
+      margin-top: 12%;
+    }
+  }
+}
+
+#projectDecription {
+  border-top-left-radius: 30px;
+  position: relative;
+  top: -30px;
+  background: white;
+  border-top-right-radius: 30px;
+  margin-top: -167px;
+  padding: 90px 0px;
+  .blue-triangle {
+    width: 0;
+    height: 0;
+    border-top: 52px solid transparent;
+    border-left: 66px solid $blue;
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    top: -45px;
+    right: 0px;
+    z-index: 1;
+    transform: rotateZ(330deg);
+  }
+  .white-triangle {
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-left: 31px solid $white;
+    border-bottom: 14px solid transparent;
+    position: absolute;
+    left: 17px;
+    bottom: 45px;
+    z-index: 1;
+    transform: rotateZ(330deg);
+  }
+
+  .black-triangle {
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-left: 31px solid $bold_Black;
+    border-bottom: 14px solid transparent;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    z-index: 1;
+    transform: rotateZ(330deg);
+  }
+
+  .carousel-indicators {
+    bottom: -40px;
+
+    li {
+      display: inline-block;
+      width: 30px;
+      height: 5px;
+      margin: 0 0 0 10px;
+      background-color: $dark-gray;
+      cursor: pointer;
+    }
+    .active {
+      background-color: $light_blue;
+    }
+  }
+
+  .carousel-inner {
+    text-align: -webkit-center;
+
+    .carousel-item {
+      // @include justifyAlignCenter;
+      img {
+        box-shadow: 1px 2px 20px 13px #e4e3e378;
+        width: 90% !important;
+        height: 400px;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  h2 {
+    @include normal;
+    color: $blue;
+    font-family: $Jost_font;
+    letter-spacing: -1.1px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin: 0px 0px 20px;
+  }
+  p {
+    @include normal;
+    font-family: $arial-unicode-MS;
+    font-size: 20px;
+    color: $bold_Black;
+  }
+}
+
+.how-it-works {
+  background-color: $light-gray;
+  padding: 120px 0px 80px;
+  h2 {
+    @include normal;
+    color: $regular-black;
+    font-family: $Jost_font;
+    letter-spacing: -1.1px;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 450px;
+    margin-bottom: 25px;
+  }
+  p {
+    @include normal;
+    font-family: $arial-unicode-MS;
+    font-size: 20px;
+    color: $bold_Black;
+  }
+  .col-lg-6:nth-of-type(2) p {
+    color: $bold_Black;
+  }
+  .col-lg-6:nth-of-type(1) p {
+    color: $bold_Black;
+  }
+}
+
+// --------------------- End Of PRODUCTS Page ----------------
+
+// -------------------- Start Of Team    -------------------
+
+.team-panner {
+  background-image: url("../assets/images/team-panner.png");
+  .content {
+    width: 80%;
+  }
+}
+.team-container {
+  border-top-left-radius: 30px;
+  background: $light-gray;
+  border-top-right-radius: 30px;
+  .team-card {
+    border-radius: 19.7px;
+    background-color: $white;
+    border-radius: 30px;
+    padding: 0px 0px 40px;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 10px 2px $shadow-color;
+    transition: 2s;
+    .member-image {
+      text-align: center;
+      img {
+        width: 150px;
+        border-radius: 50%;
+        margin-top: -26%;
+        height: 150px;
+      }
+    }
+    h5 {
+      @include normal;
+      font-weight: bold;
+      font-family: $Jost_font;
+      text-align: center;
+      color: $bold_Black;
+      padding: 20px 0px 0px;
+    }
+    h6 {
+      @include normal;
+      font-weight: bold;
+      font-family: $Jost_font;
+      text-align: center;
+      color: $blue;
+    }
+  }
+}
+
+// -------------------- End Of Team    ---------------------
+
+// ------------------- Start Of Outsourcing  ------------------
+
+.outsourcing-page {
+  @include HideScroll;
+
+  .page-content {
+    border-top-left-radius: 30px;
+    position: relative;
+    // top: -200px;
+    background: white;
+    border-top-right-radius: 30px;
+    padding: 90px 0px;
+    h3 {
+      @include normal;
+      font-family: $Jost_font;
+      color: #068bd9;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      @include normal;
+      font-family: $arial-unicode-MS;
+      font-size: 19px;
+      line-height: 1.4;
+    }
+    .define-outsourcing {
+      margin: 10px 0px 12%;
+      // transition: 0.5s;
+      h3 {
+        text-align: center;
+      }
+    }
+    .outsourcing-types {
+      .item {
+        margin-bottom: 10%;
+        img {
+          max-width: 100%;
+          border-radius: 10px;
+          box-shadow: -2px 3px 14px 5px #0000001f;
+          position: relative;
+          transition: 1s;
+        }
+        .item-definition {
+          position: relative;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}
+
+// -------------------------   End Of Outsourcing  ----------------------------
+
+// -------------------- Start Of our-services-page  ------------------
+
+.our-services-page {
+  .our-services {
+    border-top-left-radius: 30px;
+    position: relative;
+    background: $white;
+    border-top-right-radius: 30px;
+    padding: 5% 0px 0px;
+    top: -30px;
+    .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin: 0 auto;
+      background: #000;
+      border-radius: 15px;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+
+      .face {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px;
+
+        color: #fff;
+
+        &.face2 {
+          transition: 0.5s;
+
+          h2 {
+            margin: 0;
+            padding: 0;
+            // font-size: 10em;
+            color: #fff;
+            transition: 0.5s;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+          }
+        }
+      }
+    }
+
+    .card:hover .face.face2 {
+      height: 60px;
+
+      h2 {
+        font-size: 2em;
+      }
+    }
+
+    .card:nth-child(1) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        $bold_Black 0%,
+        $regular-black 45%,
+        $lactic 100%
+      );
+      border-radius: 15px;
+    }
+
+    .card:nth-child(2) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        $bold_Black 8%,
+        #5894ac 45%,
+        $bold_Black 90%
+      );
+      border-radius: 15px;
+    }
+
+    .card:nth-child(3) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        $lactic 0%,
+        $regular-black 45%,
+        $bold_Black 100%
+      );
+      border-radius: 15px;
+    }
+  }
+
+  .services-panner {
+    background-image: url("../assets/images/services-banner.png");
+  }
+  .services-description {
+    padding: 50px 4%;
+
+    background: #3032351f;
+
+    ul {
+      li {
+        list-style: disc;
+      }
+    }
+    & * {
+      @include normal;
+      // margin: 0 126px 39px;
+      font-family: $arial-unicode-MS;
+      font-size: 18px;
+      color: $bold_Black;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+// -------------------- End Of our-services-page  ---------------------
+
+// --------------------  Starting of software-development-page  ---------------
+.software-development-page {
+  .inner-page-panner .content {
+    width: 80%;
+  }
+
+  .software-development {
+    border-top-left-radius: 30px;
+    position: relative;
+
+    background: white;
+    border-top-right-radius: 30px;
+    padding: 90px 6%;
+
+    label {
+      @include normal;
+      font-weight: bold;
+      font-family: $Jost_font;
+      color: $blue;
+      line-height: 1.1;
+      font-size: 25px;
+      padding: 50px 0px 20px;
+    }
+    p {
+      @include normal;
+      font-family: $arial-unicode-MS;
+      color: $bold_Black;
+      font-size: 1.2rem;
+    }
+  }
+}
+// -------------------- End Of software-development-page  ---------------------
+
+// -------------------- Start Of consulting-services ------------------
+
+.consulting-services-page {
+  @include HideScroll;
+
+  .page-content {
+    border-top-left-radius: 30px;
+    position: relative;
+    // top: -200px;
+    background: white;
+    border-top-right-radius: 30px;
+    padding: 90px 0px;
+    h3 {
+      @include normal;
+      font-family: $Jost_font;
+      color: #068bd9;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      @include normal;
+      font-family: $arial-unicode-MS;
+      font-size: 19px;
+      line-height: 1.4;
+    }
+    .define-consulting {
+      margin: 10px 0px 12%;
+      // transition: 0.5s;
+      h3 {
+        text-align: center;
+      }
+    }
+    .consulting-types {
+      .item {
+        margin-bottom: 10%;
+        img {
+          max-width: 100%;
+          border-radius: 10px;
+          box-shadow: -2px 3px 14px 5px #0000001f;
+          position: relative;
+          transition: 1s;
+        }
+        .item-definition {
+          position: relative;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}
+
+// -------------------------   End Of consulting-services  --------------------
+
+// -------------------------  Start Of Contact Us  ---------------------------
+
+.contact-us-page {
+  #contact {
+    padding: 10% 0px;
+    form {
+      input,
+      textarea {
+        margin-bottom: 10px;
+      }
+      .btn-submit {
+        background: white;
+        border-color: #0047b3;
+        border-radius: 10px;
+        padding: 3px 20px;
+        &:hover {
+          background: #0047b3;
+          color: white;
+        }
+      }
+    }
+    iframe {
+      margin-top: 13%;
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      ul {
+        li {
+          display: flex;
+          margin: 10px 0px !important;
+
+          img {
+            padding: 0px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+// -------------------------   End Of Contact Us  ----------------------------
+
+// -------------------------  Start Of apply-job-page  ---------------------------
+.apply-job-page {
+  .form-container {
+    padding: 10% 0px;
+
+    .btn-submit {
+      background: white;
+      border-color: #0047b3;
+      border-radius: 10px;
+      padding: 3px 20px;
+      &:hover {
+        background: #0047b3;
+        color: white;
+      }
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+  }
+}
+// -------------------------   End Ofapply-job-page ----------------------------
+
+// ====================== End Of Inner Pages  =====================
+
 @include LargeScreen;
 @include MobAndTap;
+
 @include animation;

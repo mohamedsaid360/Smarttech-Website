@@ -49,6 +49,10 @@ header nav {
   display: flex;
 }
 
+header nav .no-word-logo {
+  display: none;
+}
+
 header nav .logo {
   margin-right: auto;
 }
@@ -66,6 +70,7 @@ header nav ul li {
   padding: 0px 10px;
   text-transform: uppercase;
   font-family: "Jost";
+  position: relative;
 }
 
 header nav ul li a {
@@ -118,6 +123,57 @@ header nav ul li .active::after {
   background: #136de6;
 }
 
+header nav ul li .services-minus {
+  position: absolute;
+  display: none;
+  padding: 20px 8px;
+  border-radius: 15px;
+}
+
+header nav ul li .services-minus ul {
+  padding: 0px;
+}
+
+header nav ul li .services-minus ul li {
+  padding: 5px 2px;
+  cursor: pointer;
+}
+
+header nav ul li .services-minus ul li a {
+  color: #22262a;
+  font-family: "Jost";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2.3;
+  letter-spacing: 0.19px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+header nav ul li .services-minus ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #136ee600;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+header nav ul li .services-minus ul li a:hover::after {
+  width: 100%;
+  background: #136de6;
+}
+
+.scrollable-header .no-word-logo {
+  display: block;
+  max-width: 73px;
+}
+
+.scrollable-header .normal-logo {
+  display: none;
+}
+
 /* =======================================  End Of Header  ================================== */
 /* ======================================== Start Of landing  =============================== */
 .landing {
@@ -136,7 +192,7 @@ header nav ul li .active::after {
 }
 
 .landing .background-landing {
-  background-image: url(../assets/images/banner-home@3x.webp);
+  background-image: url(../assets/images/banner-home@3x.png);
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -927,7 +983,6 @@ footer .f-leading {
   -webkit-transition: 1s;
   transition: 1s;
   padding: 35px 0px;
-  padding-top: 30%;
 }
 
 footer .f-leading .logo img {
@@ -1010,12 +1065,825 @@ footer .tail ul li a img {
   max-width: 30px;
 }
 
+.inner-page-panner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../assets/images/products-images/banner@2x.png");
+  height: 430px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.inner-page-panner .content {
+  color: white;
+  text-align: center;
+}
+
+.inner-page-panner .content h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
+.products {
+  border-top-left-radius: 30px;
+  position: relative;
+  top: -30px;
+  background: white;
+  border-top-right-radius: 30px;
+  padding: 90px 0px;
+}
+
+.products .product {
+  -webkit-box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19);
+  height: 450px;
+  border-radius: 10px;
+  margin: 25px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.products .product img {
+  height: 230px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.products .product h2 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: bold;
+  font-family: "Jost";
+  color: #212529;
+  line-height: 1.1;
+  font-size: 21.8px;
+  padding: 25px 25px 10px;
+}
+
+.products .product p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
+  color: #212529;
+  font-size: 15.6px;
+  padding: 0px 25px;
+}
+
+.products .product .blue-overlay {
+  background-color: #136de6;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 99%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 1;
+}
+
+.products .product .blue-overlay b {
+  font-size: 15px;
+  color: white;
+  font-family: "Jost";
+  display: block;
+  margin: 2px 25px 0px;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+}
+
+.products .product .blue-overlay b a {
+  color: inherit;
+  cursor: pointer;
+}
+
+.products .product .blue-overlay b span {
+  background: white;
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1.5px;
+  margin: 5px 0px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.enterprise-system {
+  background-color: #f2f4f8;
+}
+
+.enterprise-system h1 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Jost";
+  font-weight: 800;
+  letter-spacing: -1.1px;
+  padding: 35px 0px;
+}
+
+.enterprise-system .cards-container {
+  top: 0px;
+  background-color: inherit;
+  border-radius: unset;
+  padding: 45px 0px;
+}
+
+.enterprise-system .cards-container .img-container .img {
+  background: #136de6;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -50px 0px 30px;
+}
+
+.enterprise-system .cards-container .img-container .img img {
+  max-width: 40px;
+  margin: 0px;
+}
+
+.enterprise-system .cards-container .img-container img[alt="Convo Ai"] {
+  max-width: 50px;
+}
+
+.enterprise-system .cards-container .read-more {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Jost";
+  margin-top: 20%;
+  color: #434343;
+  cursor: pointer;
+}
+
+.enterprise-system .cards-container .col-lg-4:nth-of-type(2) .read-more {
+  margin-top: 12%;
+}
+
+#projectDecription {
+  border-top-left-radius: 30px;
+  position: relative;
+  top: -30px;
+  background: white;
+  border-top-right-radius: 30px;
+  margin-top: -167px;
+  padding: 90px 0px;
+}
+
+#projectDecription .blue-triangle {
+  width: 0;
+  height: 0;
+  border-top: 52px solid transparent;
+  border-left: 66px solid #136de6;
+  border-bottom: 25px solid transparent;
+  position: absolute;
+  top: -45px;
+  right: 0px;
+  z-index: 1;
+  -webkit-transform: rotateZ(330deg);
+          transform: rotateZ(330deg);
+}
+
+#projectDecription .white-triangle {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 31px solid white;
+  border-bottom: 14px solid transparent;
+  position: absolute;
+  left: 17px;
+  bottom: 45px;
+  z-index: 1;
+  -webkit-transform: rotateZ(330deg);
+          transform: rotateZ(330deg);
+}
+
+#projectDecription .black-triangle {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 31px solid #212529;
+  border-bottom: 14px solid transparent;
+  position: absolute;
+  right: 10px;
+  top: 100px;
+  z-index: 1;
+  -webkit-transform: rotateZ(330deg);
+          transform: rotateZ(330deg);
+}
+
+#projectDecription .carousel-indicators {
+  bottom: -40px;
+}
+
+#projectDecription .carousel-indicators li {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  margin: 0 0 0 10px;
+  background-color: rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+
+#projectDecription .carousel-indicators .active {
+  background-color: #006ff3;
+}
+
+#projectDecription .carousel-inner {
+  text-align: -webkit-center;
+}
+
+#projectDecription .carousel-inner .carousel-item img {
+  -webkit-box-shadow: 1px 2px 20px 13px #e4e3e378;
+          box-shadow: 1px 2px 20px 13px #e4e3e378;
+  width: 90% !important;
+  height: 400px;
+  border-radius: 12px;
+}
+
+#projectDecription h2 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #136de6;
+  font-family: "Jost";
+  letter-spacing: -1.1px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin: 0px 0px 20px;
+}
+
+#projectDecription p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
+  font-size: 20px;
+  color: #212529;
+}
+
+.how-it-works {
+  background-color: #f2f4f8;
+  padding: 120px 0px 80px;
+}
+
+.how-it-works h2 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #434343;
+  font-family: "Jost";
+  letter-spacing: -1.1px;
+  text-transform: uppercase;
+  font-weight: 800;
+  width: 450px;
+  margin-bottom: 25px;
+}
+
+.how-it-works p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
+  font-size: 20px;
+  color: #212529;
+}
+
+.how-it-works .col-lg-6:nth-of-type(2) p {
+  color: #212529;
+}
+
+.how-it-works .col-lg-6:nth-of-type(1) p {
+  color: #212529;
+}
+
+.team-panner {
+  background-image: url("../assets/images/team-panner.png");
+}
+
+.team-panner .content {
+  width: 80%;
+}
+
+.team-container {
+  border-top-left-radius: 30px;
+  background: #f2f4f8;
+  border-top-right-radius: 30px;
+}
+
+.team-container .team-card {
+  border-radius: 19.7px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 0px 0px 40px;
+  margin-bottom: 100px;
+  -webkit-box-shadow: 0px 0px 10px 2px #21252936;
+          box-shadow: 0px 0px 10px 2px #21252936;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.team-container .team-card .member-image {
+  text-align: center;
+}
+
+.team-container .team-card .member-image img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: -26%;
+  height: 150px;
+}
+
+.team-container .team-card h5 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: bold;
+  font-family: "Jost";
+  text-align: center;
+  color: #212529;
+  padding: 20px 0px 0px;
+}
+
+.team-container .team-card h6 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: bold;
+  font-family: "Jost";
+  text-align: center;
+  color: #136de6;
+}
+
+.outsourcing-page {
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.outsourcing-page::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+.outsourcing-page::-webkit-scrollbar-track {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+}
+
+.outsourcing-page::-webkit-scrollbar-thumb {
+  background: transparent !important;
+  border: none !important;
+}
+
+.outsourcing-page::-webkit-scrollbar-thumb:hover {
+  background: transparent !important;
+}
+
+.outsourcing-page .page-content {
+  border-top-left-radius: 30px;
+  position: relative;
+  background: white;
+  border-top-right-radius: 30px;
+  padding: 90px 0px;
+}
+
+.outsourcing-page .page-content h3 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Jost";
+  color: #068bd9;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.outsourcing-page .page-content p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.outsourcing-page .page-content .define-outsourcing {
+  margin: 10px 0px 12%;
+}
+
+.outsourcing-page .page-content .define-outsourcing h3 {
+  text-align: center;
+}
+
+.outsourcing-page .page-content .outsourcing-types .item {
+  margin-bottom: 10%;
+}
+
+.outsourcing-page .page-content .outsourcing-types .item img {
+  max-width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px 3px 14px 5px #0000001f;
+          box-shadow: -2px 3px 14px 5px #0000001f;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.outsourcing-page .page-content .outsourcing-types .item .item-definition {
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.our-services-page .our-services {
+  border-top-left-radius: 30px;
+  position: relative;
+  background: white;
+  border-top-right-radius: 30px;
+  padding: 5% 0px 0px;
+  top: -30px;
+}
+
+.our-services-page .our-services .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.our-services-page .our-services .card .face {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  color: #fff;
+}
+
+.our-services-page .our-services .card .face.face2 {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.our-services-page .our-services .card .face.face2 h2 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.our-services-page .our-services .card:hover .face.face2 {
+  height: 60px;
+}
+
+.our-services-page .our-services .card:hover .face.face2 h2 {
+  font-size: 2em;
+}
+
+.our-services-page .our-services .card:nth-child(1) .face.face2 {
+  background-image: linear-gradient(40deg, #212529 0%, #434343 45%, #32c5ff 100%);
+  border-radius: 15px;
+}
+
+.our-services-page .our-services .card:nth-child(2) .face.face2 {
+  background-image: linear-gradient(40deg, #212529 8%, #5894ac 45%, #212529 90%);
+  border-radius: 15px;
+}
+
+.our-services-page .our-services .card:nth-child(3) .face.face2 {
+  background-image: linear-gradient(40deg, #32c5ff 0%, #434343 45%, #212529 100%);
+  border-radius: 15px;
+}
+
+.our-services-page .services-panner {
+  background-image: url("../assets/images/services-banner.png");
+}
+
+.our-services-page .services-description {
+  padding: 50px 4%;
+  background: #3032351f;
+}
+
+.our-services-page .services-description ul li {
+  list-style: disc;
+}
+
+.our-services-page .services-description * {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
+  font-size: 18px;
+  color: #212529;
+}
+
+.our-services-page .services-description p {
+  margin-bottom: 30px;
+}
+
+.software-development-page .inner-page-panner .content {
+  width: 80%;
+}
+
+.software-development-page .software-development {
+  border-top-left-radius: 30px;
+  position: relative;
+  background: white;
+  border-top-right-radius: 30px;
+  padding: 90px 6%;
+}
+
+.software-development-page .software-development label {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: bold;
+  font-family: "Jost";
+  color: #136de6;
+  line-height: 1.1;
+  font-size: 25px;
+  padding: 50px 0px 20px;
+}
+
+.software-development-page .software-development p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
+  color: #212529;
+  font-size: 1.2rem;
+}
+
+.consulting-services-page {
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.consulting-services-page::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+.consulting-services-page::-webkit-scrollbar-track {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+}
+
+.consulting-services-page::-webkit-scrollbar-thumb {
+  background: transparent !important;
+  border: none !important;
+}
+
+.consulting-services-page::-webkit-scrollbar-thumb:hover {
+  background: transparent !important;
+}
+
+.consulting-services-page .page-content {
+  border-top-left-radius: 30px;
+  position: relative;
+  background: white;
+  border-top-right-radius: 30px;
+  padding: 90px 0px;
+}
+
+.consulting-services-page .page-content h3 {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Jost";
+  color: #068bd9;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.consulting-services-page .page-content p {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: "Arial Unicode MS";
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.consulting-services-page .page-content .define-consulting {
+  margin: 10px 0px 12%;
+}
+
+.consulting-services-page .page-content .define-consulting h3 {
+  text-align: center;
+}
+
+.consulting-services-page .page-content .consulting-types .item {
+  margin-bottom: 10%;
+}
+
+.consulting-services-page .page-content .consulting-types .item img {
+  max-width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px 3px 14px 5px #0000001f;
+          box-shadow: -2px 3px 14px 5px #0000001f;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.consulting-services-page .page-content .consulting-types .item .item-definition {
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.contact-us-page #contact {
+  padding: 10% 0px;
+}
+
+.contact-us-page #contact form input,
+.contact-us-page #contact form textarea {
+  margin-bottom: 10px;
+}
+
+.contact-us-page #contact form .btn-submit {
+  background: white;
+  border-color: #0047b3;
+  border-radius: 10px;
+  padding: 3px 20px;
+}
+
+.contact-us-page #contact form .btn-submit:hover {
+  background: #0047b3;
+  color: white;
+}
+
+.contact-us-page #contact iframe {
+  margin-top: 13%;
+}
+
+.contact-us-page #contact .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-us-page #contact .info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0px !important;
+}
+
+.contact-us-page #contact .info ul li img {
+  padding: 0px 10px;
+}
+
+.apply-job-page .form-container {
+  padding: 10% 0px;
+}
+
+.apply-job-page .form-container .btn-submit {
+  background: white;
+  border-color: #0047b3;
+  border-radius: 10px;
+  padding: 3px 20px;
+}
+
+.apply-job-page .form-container .btn-submit:hover {
+  background: #0047b3;
+  color: white;
+}
+
+.apply-job-page .form-container .form-group {
+  margin-bottom: 15px;
+}
+
 @media only screen and (min-width: 900px) {
-  .reset-margen {
-    margin-top: -167px;
+  .reset-margin {
+    margin-top: -195px;
   }
   header {
-    margin: 34px 0px;
+    margin: 35px 0px;
+  }
+  header #ServicesMinus {
+    position: relative;
+  }
+  header .services-minus {
+    background: white;
+    width: 205%;
+    top: 50px;
+  }
+  header .services-minus ul {
+    display: -ms-grid;
+    display: grid;
+  }
+  .scrollable-header {
+    background: white;
+    margin-top: 0px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 73px;
+    padding: 12px;
+    z-index: 11;
+    -webkit-box-shadow: -1px 6px 10px 5px #554f4f2b;
+            box-shadow: -1px 6px 10px 5px #554f4f2b;
+  }
+  .scrollable-header ul li :hover {
+    color: #212529;
+  }
+  .scrollable-header ul li .active {
+    color: #212529;
+  }
+  .scrollable-header ul li .services-minus {
+    top: 70px;
   }
   .landing {
     margin-top: -162px;
@@ -1092,11 +1960,123 @@ footer .tail ul li a img {
   .custom-software h2 {
     font-size: 30px;
   }
+  .inner-page-panner {
+    position: relative;
+    top: -163px;
+  }
+  .inner-page-panner p {
+    font-size: 25px;
+  }
+  .team-container {
+    border-top-left-radius: 30px;
+    position: relative;
+    top: -30px;
+    background: #f2f4f8;
+    border-top-right-radius: 30px;
+    margin-top: -167px;
+    padding: 125px 65px;
+  }
+  .team-container .team-card {
+    border-radius: 19.7px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0px 0px 40px;
+    margin-bottom: 100px;
+    -webkit-box-shadow: 0px 0px 10px 2px #21252936;
+            box-shadow: 0px 0px 10px 2px #21252936;
+    margin-top: 65%;
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  .team-container .team-card .member-image {
+    text-align: center;
+  }
+  .team-container .team-card .member-image img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: -26%;
+    height: 150px;
+  }
+  .team-container .team-card h5 {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: bold;
+    font-family: "Jost";
+    text-align: center;
+    color: #212529;
+    padding: 20px 0px 0px;
+  }
+  .team-container .team-card h6 {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: bold;
+    font-family: "Jost";
+    text-align: center;
+    color: #136de6;
+  }
+  .products {
+    margin-top: -167px;
+  }
+  .outsourcing-page .outsourcing-types .item:nth-of-type(1) img,
+  .outsourcing-page .outsourcing-types .item:nth-of-type(3) img {
+    right: -200%;
+  }
+  .outsourcing-page .outsourcing-types .item:nth-of-type(1) .item-definition,
+  .outsourcing-page .outsourcing-types .item:nth-of-type(3) .item-definition {
+    left: -200%;
+  }
+  .outsourcing-page .outsourcing-types .item:nth-of-type(2) .row,
+  .outsourcing-page .outsourcing-types .item:nth-of-type(4) .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .outsourcing-page .outsourcing-types .item:nth-of-type(2) img,
+  .outsourcing-page .outsourcing-types .item:nth-of-type(4) img {
+    left: -200%;
+  }
+  .outsourcing-page .outsourcing-types .item:nth-of-type(2) .item-definition,
+  .outsourcing-page .outsourcing-types .item:nth-of-type(4) .item-definition {
+    right: -200%;
+  }
+  .consulting-services-page .consulting-types .item:nth-of-type(1) img,
+  .consulting-services-page .consulting-types .item:nth-of-type(3) img {
+    right: -200%;
+  }
+  .consulting-services-page .consulting-types .item:nth-of-type(1) .item-definition,
+  .consulting-services-page .consulting-types .item:nth-of-type(3) .item-definition {
+    left: -200%;
+  }
+  .consulting-services-page .consulting-types .item:nth-of-type(2) .row,
+  .consulting-services-page .consulting-types .item:nth-of-type(4) .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .consulting-services-page .consulting-types .item:nth-of-type(2) img,
+  .consulting-services-page .consulting-types .item:nth-of-type(4) img {
+    left: -200%;
+  }
+  .consulting-services-page .consulting-types .item:nth-of-type(2) .item-definition,
+  .consulting-services-page .consulting-types .item:nth-of-type(4) .item-definition {
+    right: -200%;
+  }
 }
 
 @media only screen and (max-width: 900px) {
   header {
     overflow-x: hidden;
+    position: absolute;
+    right: 0px;
+    width: 100%;
   }
   header .container {
     max-width: -webkit-fill-available;
@@ -1129,9 +2109,17 @@ footer .tail ul li a img {
   header .container nav ul li a {
     color: white;
   }
+  header .container nav ul li .services-minus {
+    background: white;
+    right: 1px;
+  }
+  header .container nav ul li .services-minus ul {
+    display: unset;
+  }
+  header .container nav ul li .services-minus ul li a {
+    color: #212529;
+  }
   .landing {
-    position: absolute;
-    top: 0px;
     height: calc(90vh);
   }
   .landing .landing-content h1 {
@@ -1154,7 +2142,7 @@ footer .tail ul li a img {
     margin-top: 15%;
   }
   .cards-container .item {
-    margin: 20px 0px;
+    margin: 70px 0px;
   }
   .cards-container .item img {
     max-width: 100px;
@@ -1227,6 +2215,57 @@ footer .tail ul li a img {
   }
   footer .tail ul {
     padding: 20px 0px;
+  }
+  .inner-page-panner p {
+    font-size: 18px;
+  }
+  .team-container {
+    margin-top: -10%;
+    padding: 90px 15px;
+  }
+  .team-container .team-card {
+    margin-top: 20%;
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  .team-container .team-card .member-image img {
+    width: 120px;
+    border-radius: 50%;
+    margin-top: -16%;
+    height: 120px;
+  }
+  .products {
+    padding: 90px 12px;
+  }
+  .outsourcing-page .page-content {
+    top: -30px;
+  }
+  .outsourcing-page .page-content .outsourcing-types img {
+    margin-bottom: 50px;
+  }
+  .outsourcing-page .page-content .outsourcing-types .item-definition {
+    margin-bottom: 30px;
+  }
+  .outsourcing-page .page-content .outsourcing-types item:last-of-type img {
+    margin-bottom: 0px;
+  }
+  .our-services-page .our-services .card {
+    margin: 20px 5px;
+  }
+  .consulting-services-page .page-content {
+    top: -30px;
+  }
+  .consulting-services-page .page-content .consulting-types img {
+    margin-bottom: 50px;
+  }
+  .consulting-services-page .page-content .consulting-types .item-definition {
+    margin-bottom: 30px;
+  }
+  .contact-us-page #contact .info {
+    margin-top: 10%;
+  }
+  .contact-us-page #contact .info ul {
+    padding: 0px;
   }
 }
 
@@ -1323,6 +2362,59 @@ footer .tail ul li a img {
   opacity: 1;
 }
 
+.active .project-decription .blue-triangle {
+  -webkit-animation: blueTriangleMoving 3s ease-in-out 0s 1;
+          animation: blueTriangleMoving 3s ease-in-out 0s 1;
+}
+
+.active .project-decription .white-triangle {
+  -webkit-animation: whiteTriangleMoving 4s ease-in-out 0s 1;
+          animation: whiteTriangleMoving 4s ease-in-out 0s 1;
+}
+
+.active .project-decription .black-triangle {
+  -webkit-animation: blackTriangleMoving 2s ease-in-out 0s 1;
+          animation: blackTriangleMoving 2s ease-in-out 0s 1;
+}
+
+.active .team-card {
+  margin-top: 0%;
+}
+
+.active .item:nth-of-type(1) .active img,
+.active .item:nth-of-type(3) .active img {
+  right: 0px !important;
+}
+
+.active .item:nth-of-type(1) .active .item-definition,
+.active .item:nth-of-type(3) .active .item-definition {
+  left: 0px !important;
+}
+
+.active .item:nth-of-type(2) .active img,
+.active .item:nth-of-type(4) .active img {
+  left: 0px !important;
+}
+
+.active .item:nth-of-type(2) .active .item-definition,
+.active .item:nth-of-type(4) .active .item-definition {
+  right: 0px !important;
+}
+
+.products .product img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.products .product:hover .blue-overlay {
+  -webkit-transform: scaleY(1.5);
+          transform: scaleY(1.5);
+}
+
+.products .product b:hover span {
+  width: 75px;
+}
+
 .cards-container .col-lg-4:nth-of-type(1) .item {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
@@ -1409,8 +2501,73 @@ footer .tail ul li a img {
 }
 
 .contact-us ul li:nth-of-type(7) {
-  -webkit-transition-delay: 1.1s;
-          transition-delay: 1.1s;
+  -webkit-transition-delay: 2.1s;
+          transition-delay: 2.1s;
+}
+
+.item:nth-of-type(2),
+.item:nth-of-type(3),
+.item:nth-of-type(4) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+@-webkit-keyframes blueTriangleMoving {
+  0% {
+    right: 60px;
+    opacity: 0.4;
+  }
+  100% {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes blueTriangleMoving {
+  0% {
+    right: 60px;
+    opacity: 0.4;
+  }
+  100% {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blackTriangleMoving {
+  0% {
+    right: 40px;
+  }
+  100% {
+    right: 10px;
+  }
+}
+
+@keyframes blackTriangleMoving {
+  0% {
+    right: 40px;
+  }
+  100% {
+    right: 10px;
+  }
+}
+
+@-webkit-keyframes whiteTriangleMoving {
+  0% {
+    left: 60px;
+  }
+  100% {
+    left: 17px;
+  }
+}
+
+@keyframes whiteTriangleMoving {
+  0% {
+    left: 60px;
+  }
+  100% {
+    left: 17px;
+  }
 }
 
 /* The typing effect */

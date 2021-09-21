@@ -16,7 +16,7 @@
       gtag("config", "UA-134166165-1");
     </script>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       var $zoho = $zoho || {};
       $zoho.salesiq = $zoho.salesiq || {
         widgetcode:
@@ -33,7 +33,7 @@
       t = d.getElementsByTagName("script")[0];
       t.parentNode.insertBefore(s, t);
       d.write("<div id='zsiqwidget'></div>");
-    </script> -->
+    </script>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -94,13 +94,25 @@
       type="text/css"
     />
   </head>
-  <body onload="onLoad()">
+
+  <body>
     <!-- ------ start of header  --------->
-    <header>
+    <header id="SmarttechHeader">
       <div class="container">
         <nav>
           <div class="logo">
-            <img src="./assets/images/smart-tech.png" alt="logo" />
+            <a href="./index.html">
+              <img
+                class="normal-logo"
+                src="./assets/images/smart-tech.png"
+                alt="logo"
+              />
+              <img
+                class="no-word-logo"
+                src="./assets/images/smart-tech-no-word.png"
+                alt="logo"
+              />
+            </a>
           </div>
           <div class="toggle-button d-lg-none" onclick="openNav()">
             <span style="font-size: 30px; cursor: pointer">&#9776;</span>
@@ -108,17 +120,42 @@
 
           <ul id="mySidenav">
             <li><a class="active" href="#"> Home</a></li>
-            <li><a href="#"> About</a></li>
-            <li><a href="#"> Services</a></li>
-            <li><a href="#"> Products</a></li>
-            <li><a href="#"> Team</a></li>
-            <li><a href="#"> Contact us</a></li>
+            <li><a href="#" onclick="InnerScroll('about')"> About</a></li>
+            <li><a href="./pages/outsourcingService.html">outsourcing </a></li>
+            <li id="ServicesMinus">
+              <a href="#"> Services</a>
+              <div class="services-minus">
+                <ul>
+                  <li><a href="./pages/services.html"> Our services</a></li>
+                  <li>
+                    <a href="./pages/softwareDevelopment.html"
+                      >Software development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./pages/consultaionsServices.html"
+                      >Consultations services</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./pages/products.html"> Products</a></li>
+            <li><a href="./pages/team.html"> Team</a></li>
+            <li>
+              <!-- <a href="#" onclick="InnerScroll('contact')"> Contact us</a> -->
+              <a href="./pages/contactUSForm.html"> Contact us</a>
+            </li>
+            <li>
+              <!-- <a href="#" onclick="InnerScroll('contact')"> Contact us</a> -->
+              <a href="./pages/applyForJob.html"> Apply For Job</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- ------ end of header  -------- -->
+    <!--------- end of header  -------- -->
 
     <!-- ------ start of landing  -------->
     <div class="landing">
@@ -191,10 +228,10 @@
         </div>
       </div>
     </section>
-    <div class="reset-margen"></div>
+    <div class="reset-margin"></div>
     <!-- ------ End Of  cards ---------->
 
-    <section class="animate">
+    <section class="animate" id="AboutUS">
       <div class="logos">
         <div class="container">
           <div class="row">
@@ -219,7 +256,6 @@
                 <img src="./assets/images/badge-regular.png" alt="badge" />
                 <img src="./assets/images/top-software.png" alt="badge" />
               </div>
-             
             </div>
             <div class="col-lg-8 col-md-12 d-lg-flex justify-content-between">
               <div class="card">
@@ -480,8 +516,8 @@
     <div class="container animate" id="customSoftware">
       <section class="custom-software">
         <div>
-          <h2 >Custom Software Development</h2>
-          <h1 >
+          <h2>Custom Software Development</h2>
+          <h1>
             We're never one-size-fits-all we work with your team to create
             databases, websites, and mobile apps that fit exactly what your team
             needs.
@@ -558,89 +594,89 @@
     <!-- ----------- end Key Products ----------- -->
     <!-- ----------- start contact us ----------- -->
 
-    <section class="animate">
+    <section class="animate" id="contact_Us">
       <div class="contact-us">
-        
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 col-md-12">
-            <h1>contact Us</h1>
-            <ul>
-              <li>
-                <div class="icon">
-                  <img src="./assets/icons/locte.png" alt="" />
-                </div>
-                <p>
-                  Address: 27 b, Mohammed Al Maqref, Al Manteqah as Sadesah,
-                  Nasr City - Cairo
-                </p>
-              </li>
-              <li>
-                <div class="icon">
-                  <img src="./assets/icons/land.png" alt="" />
-                </div>
-                <p><a href="tel:+2026775746"> Telephone: +2026775746/8/9</a></p>
-              </li>
-              <li>
-                <div class="icon">
-                  <img src="./assets/icons/phone.png" alt="" />
-                </div>
-                <p><a href="tel:+2026775746"> Mobile: +2026775746/8/9 </a></p>
-              </li>
-              <li>
-                <div class="icon">
-                  <img src="./assets/icons/phone.png" alt="" />
-                </div>
-                <p><a href="tel:+2026775746">Mobile: +2026775746/8/9</a></p>
-              </li>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-12">
+              <h1>contact Us</h1>
+              <ul>
+                <li>
+                  <div class="icon">
+                    <img src="./assets/icons/locte.png" alt="" />
+                  </div>
+                  <p>
+                    Address: 27 b, Mohammed Al Maqref, Al Manteqah as Sadesah,
+                    Nasr City - Cairo
+                  </p>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="./assets/icons/land.png" alt="" />
+                  </div>
+                  <p>
+                    <a href="tel:+2026775746"> Telephone: +2026775746/8/9</a>
+                  </p>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="./assets/icons/phone.png" alt="" />
+                  </div>
+                  <p><a href="tel:+2026775746"> Mobile: +2026775746/8/9 </a></p>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="./assets/icons/phone.png" alt="" />
+                  </div>
+                  <p><a href="tel:+2026775746">Mobile: +2026775746/8/9</a></p>
+                </li>
 
-              <li>
-                <div class="icon">
-                  <img src="./assets/icons/mail.png" alt="" />
-                </div>
-                <p>
-                  <a href="mailto:info@smarttechsys.com">
-                    General Email:info@smarttechsys.com</a
-                  >
-                </p>
-              </li>
-              <li>
-                <div class="icon">
-                  <img src="./assets/icons/mail.png" alt="" />
-                </div>
-                <p>
-                  <a href="mailto:info@smarttechsys.com">
-                    Business development Team Email:info@smarttechsys.com</a
-                  >
-                </p>
-              </li>
+                <li>
+                  <div class="icon">
+                    <img src="./assets/icons/mail.png" alt="" />
+                  </div>
+                  <p>
+                    <a href="mailto:info@smarttechsys.com">
+                      General Email:info@smarttechsys.com</a
+                    >
+                  </p>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="./assets/icons/mail.png" alt="" />
+                  </div>
+                  <p>
+                    <a href="mailto:info@smarttechsys.com">
+                      Business development Team Email:info@smarttechsys.com</a
+                    >
+                  </p>
+                </li>
 
-              <li>
-                <div class="icon">
-                  <img src="./assets/icons/mail.png" alt="" />
-                </div>
-                <p>
-                  <a href="mailto:info@smarttechsys.com">
-                    Careers Email:info@smarttechsys.com</a
-                  >
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-5 col-md-12">
-            <!-- google map  -->
-            <iframe
-              id="google-map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.949622618098!2d31.354092815115656!3d30.06697848187419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583ddfccd31fef%3A0xdb587fa057510fb3!2zU01BUlQgVEVDSCAtINiz2YXYp9ix2Kog2KrZgw!5e0!3m2!1sen!2seg!4v1535909954880"
-              height="391px"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+                <li>
+                  <div class="icon">
+                    <img src="./assets/icons/mail.png" alt="" />
+                  </div>
+                  <p>
+                    <a href="mailto:info@smarttechsys.com">
+                      Careers Email:info@smarttechsys.com</a
+                    >
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-5 col-md-12">
+              <!-- google map  -->
+              <iframe
+                id="google-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.949622618098!2d31.354092815115656!3d30.06697848187419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583ddfccd31fef%3A0xdb587fa057510fb3!2zU01BUlQgVEVDSCAtINiz2YXYp9ix2Kog2KrZgw!5e0!3m2!1sen!2seg!4v1535909954880"
+                height="391px"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
-      
-    </div> 
     </section>
 
     <!-- ----------- end contact us ----------- -->
@@ -651,7 +687,7 @@
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="logo">
-                <img src="./assets/images/logo.png" alt="" />
+                <img src="../assets/images/logo.png" alt="" />
               </div>
               <p>@Copyrights SmartTech 2021</p>
             </div>
@@ -659,35 +695,66 @@
               <h2>SERVICES</h2>
               <div class="map-list">
                 <ul>
-                  <li>Plumber in Bangalore</li>
-                  <li>Electrician in Bangalore</li>
-                  <li>Carpenter in Bangalore</li>
-                  <li>Appliances Repair in Bangalore</li>
-                  <li>Pest Control in Bangalore</li>
-                  <li>Painter in Bangalore</li>
+                  <li><a href="pages/services.html">Our services</a></li>
+                  <li>
+                    <a href="pages/softwareDevelopment.html">
+                      Software Development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages/consultaionsServices.html">
+                      Consultation services</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-              <h2>SERVICES</h2>
+              <h2>PRODUCTS</h2>
               <div class="map-list">
                 <ul>
-                  <li>AC Repair in Bangalore</li>
-                  <li>Carpet Cleaning in Bangalore</li>
-                  <li>Mansion/Civil Work in Bangalore</li>
-                  <li>Tile Granite Laying in Bangalore</li>
-                  <li>House Cleaning in Bangalore</li>
+                  <li>
+                    <a href="#" onclick="goToProductDetails('0')"
+                      >Asset Management</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="goToProductDetails('8')"
+                      >Warehouse Management</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="goToProductDetails('2')"
+                      >Tag Parking RFID
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="goToProductDetails('4')"
+                      >E-Learning and Exam engine</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./pages/products.html"> Show More.. </a>
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-              <h2>HOMIFY HOME MAINTENANCE PACKAGES</h2>
+              <h2>Links</h2>
               <div class="map-list">
                 <ul>
-                  <li>Full House Maintenance Package</li>
-                  <li>Home Appliances Maintenance Package</li>
-                  <li>Full House Deep Cleaning</li>
-                  <li>Package Pest Control Package</li>
+                  <li>
+                    <a href="pages/outsourcingService.html"> Outsourcing </a>
+                  </li>
+                  <li>
+                    <a href="pages/team.html"> Team </a>
+                  </li>
+                  <li>
+                    <a href="pages/contactUSForm.html"> Contact Us </a>
+                  </li>
+                  <li>
+                    <a href="pages/applyForJob.html"> Apply For Job </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -699,29 +766,29 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-12">
-              <p>About | Terms & Conditions | Privacy Policy | Blog</p>
+              <p> About | Terms & Conditions | Privacy Policy | Blog </p>
             </div>
             <div class="col-lg-6 col-md-12">
               <ul>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer"
-                    ><img src="./assets/icons/facebook.png" alt=""
+                  <a href="https://www.facebook.com/SmartTech-626073627527285" target="_blank" rel="noopener noreferrer"
+                    ><img src="../assets/icons/facebook.png" alt=""
                   /></a>
                 </li>
 
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer"
-                    ><img src="./assets/icons/twitter.PNG" alt=""
+                  <a  rel="noopener noreferrer"
+                    ><img src="../assets/icons/twitter.PNG" alt=""
                   /></a>
                 </li>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer"
-                    ><img src="./assets/icons/linkedin.PNG" alt=""
+                  <a href="https://www.linkedin.com/company/smart-tech-sys/" target="_blank" rel="noopener noreferrer"
+                    ><img src="../assets/icons/linkedin.PNG" alt=""
                   /></a>
                 </li>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer"
-                    ><img src="./assets/icons/p.PNG" alt=""
+                  <a  rel="noopener noreferrer"
+                    ><img src="../assets/icons/p.PNG" alt=""
                   /></a>
                 </li>
               </ul>
@@ -743,4 +810,9 @@
     type="text/javascript"
     src="https://maps.google.com/maps/api/js?sensor=true"
   ></script>
+  <script>
+    document.querySelector(".background-landing").style.transform =
+      "scale(1.1)";
+    document.querySelector(".landing-content h1").style.marginBottom = "2px";
+  </script>
 </html>

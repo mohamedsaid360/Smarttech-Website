@@ -4,19 +4,20 @@ $white: white;
 $blue: #136de6;
 $blue_with_opacity: #136ee600;
 $bold_Black: #212529;
-$regylar-black:#434343;
+$regular-black: #434343;
 $light_blue: #006ff3;
 $dark: #232146;
 $shadow-color: #21252936;
 $site-map-list-color: #9fa3a7;
 $footer-tail-background: #141619;
-$light-gray:#f2f4f8;
-$lactic:#32c5ff;
-
+$light-gray: #f2f4f8;
+$lactic: #32c5ff;
+$dark-gray: rgba(0, 0, 0, 0.24);
+$kashmir:#fc00ff;
 // WebSite Fonts
 $Jost_font: "Jost";
 @font-face {
-    font-family: "Arial Unicode MS"; 
-    src: url('../fonts/arial-unicode-ms.ttf');
+  font-family: "Arial Unicode MS";
+  src: url("../fonts/arial-unicode-ms.ttf");
 }
 $arial-unicode-MS: "Arial Unicode MS";

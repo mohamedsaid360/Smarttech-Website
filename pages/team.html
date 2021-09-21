@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Smarttech : Software Development company in Egypt | outsourcing | offshore
+      | RFID
+    </title>
+    <meta
+      name="description"
+      content="custom software development company In Egypt , serving companies in KSA, USA , UAE, Europe, provide outsourcing,offshore , mobile and web, Request a quote NOW,"
+    />
+    <meta
+      name="keywords"
+      content="offshore custom software development company  ,Egypt, Hire developers ,  rfid, RFID EGYPT , rfid in egypt, Radio Frequency Identification Technology, rfid solutions , solutions rfid , RFID Egypt, RFID Solution Egypt,outsource, Egypt Software, RFID Asset management, Elearing,custom software development,, custom software development Egypt, offshore Egypt "
+    />
+    <meta name="author" content="Smarttechsys" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="3 days" />
+    <meta
+      property="og:title"
+      content="Software Development company in Egypt | outsourcing | offshore | RFID"
+    />
+
+    <meta
+      name="google-site-verification"
+      content="H6PBv2rhUYdX5gRjX2czZtnifUGc8QfKzvYu2AB0hNE"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/smart-tech.png"
+      type="image/x-icon"
+    />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="../style/normalize.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  bootstrap  -->
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+
+    <!-- addfontawesome   -->
+    <link rel="stylesheet" href="../style/all.min.css" />
+
+    <!-- main css File -->
+    <link rel="stylesheet" href="../style/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body style="background-color: #f2f4f8">
+    <!-- ------ start of header  --------->
+    <header id="SmarttechHeader">
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="../index.html">
+              <img
+                class="normal-logo"
+                src="../assets/images/smart-tech.png"
+                alt="logo"
+              />
+              <img
+                class="no-word-logo"
+                src="../assets/images/smart-tech-no-word.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+          <div class="toggle-button d-lg-none" onclick="openNav()">
+            <span style="font-size: 30px; cursor: pointer">&#9776;</span>
+          </div>
+
+          <ul id="mySidenav">
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="/index.html" onclick="GoToAbout()"> About</a></li>
+            <li><a href="./outsourcingService.html">outsourcing </a></li>
+            <li id="ServicesMinus">
+              <a href="#"> Services</a>
+              <div class="services-minus">
+                <ul>
+                  <li><a href="./services.html"> Our services</a></li>
+                  <li>
+                    <a href="./softwareDevelopment.html"
+                      >Software development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./consultaionsServices.html"
+                      >Consultations services</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./products.html"> Products</a></li>
+            <li><a class="active" href="#"> Team</a></li>
+            <li>
+              <a href="/index.html" onclick="GoToContactUs()"> Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- onclick="GoToContactUs()" -->
+      </div>
+    </header>
+    <!--------- end of header  -------- -->
+
+    <div class="animate">
+      <div class="inner-page-panner team-panner">
+        <div class="content">
+          <h3>Our Team</h3>
+          <p>
+            Smart Tech Systems team members have a long & successful track
+            record in addressing the business requirements of organizations and
+            companies, and managing the most critical initiatives by offering a
+            full range of management & IT consulting
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="reset-margin"></div> -->
+
+    <section>
+      <div class="team-container">
+        <div class="row" id="teamCards"></div>
+      </div>
+    </section>
+
+    <footer class="animate">
+      <div id="SmarttechFooter"></div>
+    </footer>
+  </body>
+
+  <!---------------------   Scripts  --------------------->
+  <!--   jQuery library -->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <!-- custom js -->
+  <script src="../js/custom.js"></script>
+  <script src="../js/rendererHtml.js"></script>
+
+  <script>
+    renderSmarttechTeam();
+    rendererFooter();
+  </script>
+</html>
